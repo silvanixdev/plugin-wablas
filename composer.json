@@ -1,0 +1,15 @@
+{
+    "name": "silvanix/wablas",
+    "description": "Official Wablas Plugin",
+    "type": "project",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Silvanix\\Wablas\\": "src/"
+        }
+    },
+    "require": {
+        "guzzlehttp/guzzle": "^7.0.1"
+    }
+}
