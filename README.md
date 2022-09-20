@@ -30,8 +30,12 @@ WABLAS_TOKEN=xxxxxxxxx
     Example :
     
         <?php
+        ....
+        
         use Silvanix/Wablas/Send;
-
+        
+        ....
+        
         $phone = '6281393961320,0812615271212,0845121212';
 
         $message = 'hello';
