@@ -48,7 +48,7 @@ WABLAS_TOKEN=xxxxxxxxx
     Send::again($id);
 
 
-4. Send Multiple Text
+4. Send Multiple Message
 
     i. Send::multiple_text($payload);
     
