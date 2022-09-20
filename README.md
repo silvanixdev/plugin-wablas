@@ -1,6 +1,6 @@
 # wablas-laravel-package
 
-env
+# env
 
 WABLAS_SERVER=solo*
 
@@ -8,15 +8,13 @@ WABLAS_TOKEN=xxxxxxxxx
 
 *available server : solo,eu,pati,jogja,texas,kudus
 
+# List Command
 
-List Command
-
-
-//device info
+1. Device Info
 
 Device::info();
 
-//single message
+2. Send Single Message
 
 Send::single_text($phone,$message);
 
@@ -42,12 +40,12 @@ $message = 'hello';
 Send::single_text($phone,$message);
 
 
-//resend message
+3. Resend Message
 
 Send::again($id);
 
 
-//multiple text
+4. Multiple Text
 
 Send::multiple_text($data);
 
