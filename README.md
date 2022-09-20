@@ -1,5 +1,3 @@
-# wablas-laravel-package
-
 # env
 
 WABLAS_SERVER=solo*
