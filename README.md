@@ -8,7 +8,9 @@ WABLAS_TOKEN=xxxxxxxxx
 
 *available server : solo,eu,pati,jogja,texas,kudus
 
+
 List Command
+
 
 //device info
 
@@ -39,9 +41,11 @@ $message = 'hello';
 
 Send::single_text($phone,$message);
 
+
 //resend message
 
 Send::again($id);
+
 
 //multiple text
 
