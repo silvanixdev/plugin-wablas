@@ -47,7 +47,7 @@ WABLAS_TOKEN=xxxxxxxxx
 
     Send::multiple_text($payload);
     
-    * Example Format payload text:
+    * Example Format payload text
     
          $payload = [
          
