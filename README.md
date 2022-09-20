@@ -46,30 +46,53 @@ WABLAS_TOKEN=xxxxxxxxx
 4. Multiple Text
 
     Send::multiple_text($payload);
-    * Format payload text:
+    
+    * Example Format payload text:
+    
          $payload = [
+         
                 [
+                
                     'phone' => '6281229889541',
+                    
                     'message' => 'Test Pesan 1',
+                    
                 ],
+                
                 [
+                
                     'phone' => '6281229889541',
+                    
                     'message' => 'Hello {name} Pesan with spintax',
+                    
                     'spintax' => true,
+                    
                     'source' => 'for personal'
+                    
                 ],
+                
                 [
                     'phone' => '6285867765107',
+                    
                     'message' => 'Hello Pesan 3',
+                    
                     'secret' => true,
+                    
                 ],
+                
                 [
                     'phone' => '6287817274185-1632192971',
+                    
                     'message' => 'Test Group',
+                    
                     'isGroup' => true,
+                    
                     'source' => 'group personal'
+                    
                 ],
+                
             ];
+            
 
     Send::multple_image_url($data);
 
