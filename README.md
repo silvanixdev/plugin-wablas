@@ -23,7 +23,6 @@ Send::single_document_url($phone,$image_url);
 note : you can use multiple phone separated by comma(,)
 
 Example :
-<?php
 
 use Silvanix/Wablas/Send;
 
