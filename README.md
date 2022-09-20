@@ -38,7 +38,7 @@ Send::again($id);
 //multiple text
 
 Send::multiple_text($data);
-Send::muultple_image_url($data);
+Send::multple_image_url($data);
 Send::multiple_audio_url($data);
 Send::multiple_video_url($data);
 Send::multiple_document_url($data);
