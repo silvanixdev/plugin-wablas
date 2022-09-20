@@ -35,8 +35,6 @@ Send::single_text($phone,$message);
 Send::again($id);
 
 
-
-
 //multiple text
 
 Send::multiple_text($data);
