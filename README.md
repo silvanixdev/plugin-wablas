@@ -49,7 +49,9 @@ WABLAS_TOKEN=xxxxxxxxx
     
     * Example Format payload text
     
-         $payload = [
+            $payload =
+            
+            [
          
                 [
                 
