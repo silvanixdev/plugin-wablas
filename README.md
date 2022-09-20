@@ -6,7 +6,7 @@ WABLAS_TOKEN=xxxxxxxxx
 
 *available server : solo,eu,pati,jogja,texas,kudus
 
-# List Class
+# List Command
 
 1. Device Info
 
