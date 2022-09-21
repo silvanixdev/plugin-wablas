@@ -242,7 +242,7 @@ WABLAS_TOKEN=xxxxxxxxx
             
 5. File Upload
 
-    i. File::local_upload();
+    i. File::local_upload($file);
     
     Example :
     
