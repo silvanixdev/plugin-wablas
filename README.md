@@ -25,7 +25,9 @@ WABLAS_TOKEN=xxxxxxxxx
     v. Send::single_document_url($phone*,$image_url);
 
     note : 
+    
     ^ caption is optional
+    
     ** you can use multiple phone separated by comma(,)
     
     Example :
