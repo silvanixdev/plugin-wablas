@@ -297,7 +297,7 @@ WABLAS_TOKEN=xxxxxxxxx
                         {
                             $phone = $request->phones;
                             $file = $request->file('file');
-                            $text = Send::local_document($file,$phone);
+                            $test = Send::local_document($file,$phone);
                             echo $test;
                         }
                         
