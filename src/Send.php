@@ -249,6 +249,5 @@ class Send
 
         return $json_data;
     }
-
 }
 
