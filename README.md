@@ -13,20 +13,21 @@ WABLAS_TOKEN=xxxxxxxxx
     Device::info();
 
 2. Send Single Message
+    
+    i. Send::single_text($phone*,$message);
 
-    Send::single_text($phone,$message);
+    ii. Send::single_image_url($phone*,$image_url,$caption^);
 
-    Send::single_image_url($phone,$image_url,$caption(Optional));
+    iii. Send::single_audio_url($phone*,$image_url);
 
-    Send::single_audio_url($phone,$image_url);
+    iv. Send::single_video_url($phone*,$image_url,$caption^);
 
-    Send::single_video_url($phone,$image_url,$caption(Optional));
+    v. Send::single_document_url($phone*,$image_url);
 
-    Send::single_document_url($phone,$image_url);
-
-
-    note : you can use multiple phone separated by comma(,)
-
+    note : 
+    ^ caption is optional
+    ** you can use multiple phone separated by comma(,)
+    
     Example :
     
         <?php
@@ -42,6 +43,9 @@ WABLAS_TOKEN=xxxxxxxxx
 
         Send::single_text($phone,$message);
 
+    vi. Send::footer_message($phone,$message,$footer,$header*);
+    
+        * header is optional
 
 3. Resend Message
 
@@ -98,9 +102,40 @@ WABLAS_TOKEN=xxxxxxxxx
                 ];
         
     iii. Send::multiple_audio_url($data);
-
+    
+    * Example Format payload text
+   
+               $payload = [
+                    [
+                        'phone' => '6281229889541',
+                        'audio' => 'https://prof3ssorst3v3.github.io/media-sample-files/jimmy-coffee.mp3',
+                        'caption' => 'caption here',
+                    ],
+                    [
+                        'phone' => '6287817274185-1632192971',
+                        'audio' => 'https://prof3ssorst3v3.github.io/media-sample-files/jimmy-coffee.mp3',
+                        'isGroup' => true,
+                    ],
+                ];
+                
     iv. Send::multiple_video_url($data);
+    
+                $payload = [
+                    [
+                        'phone' => '6281229889541',
+                        'video' => 'https://prof3ssorst3v3.github.io/media-sample-files/lion-sample.mp4',
+                        'caption' => 'this caption optional',
+                    ],
+                    [
+                        'phone' => '6287817274185-1632192971',
+                        'video' => 'https://prof3ssorst3v3.github.io/media-sample-files/lion-sample.mp4',
+                         'caption' => 'Image to group',
+                        'isGroup' => true,
+                    ],
+                ];
 
     v. Send::multiple_document_url($data);
+    
     vi.
+    
     vii.
