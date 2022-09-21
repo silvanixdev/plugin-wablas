@@ -239,3 +239,31 @@ WABLAS_TOKEN=xxxxxxxxx
                     ],
                 ]
             ];
+            
+5. File Upload
+
+    i. File::local_upload();
+    
+    Example :
+    
+    - Controller
+                    ....
+
+                    use Silvanix\Wablas\File;
+
+                    ...
+
+                        public function store(Request $request)
+                        {
+                            $file = $request->file('file');
+                            $url = File::local_upload($file);
+                            echo $url;
+                        }
+                                
+    - View
+       </div>
+            <form class="needs-validation" novalidate method="post" action="{{ route('store') }}" enctype="multipart/form-data" >
+            @csrf
+                <input type="file" name="file">
+                <button type="submit"> Submit</button>
+            </form>
