@@ -295,9 +295,9 @@ WABLAS_TOKEN=xxxxxxxxx
 
                         public function store(Request $request)
                         {
-                            $phone = $request->phones;
+                            $phones = $request->phones;
                             $file = $request->file('file');
-                            $test = Send::local_document($file,$phone);
+                            $test = Send::local_document($file,$phones);
                             echo $test;
                         }
                         
