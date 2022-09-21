@@ -259,11 +259,22 @@ WABLAS_TOKEN=xxxxxxxxx
                             $url = File::local_upload($file);
                             echo $url;
                         }
+                        
+    - Route
+                
+                ...
+                
+                Route::post('.../store', [App\Http\Controllers\SomeController::class, 'store'])->name('store');
+                
+                ...
                                 
     - View
-       </div>
+    
+        ....
+        
             <form class="needs-validation" novalidate method="post" action="{{ route('store') }}" enctype="multipart/form-data" >
             @csrf
                 <input type="file" name="file">
                 <button type="submit"> Submit</button>
             </form>
+            
