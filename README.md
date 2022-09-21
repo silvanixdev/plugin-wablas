@@ -79,26 +79,28 @@ WABLAS_TOKEN=xxxxxxxxx
             ];
             
             
-   ii. Send::multple_image_url($data);
-   * Example Format payload text
+    ii. Send::multple_image_url($data);
+    
+    * Example Format payload text
    
-           $payload = [
-                [
-                    'phone' => '6281229889541',
-                    'image' => 'https://cdn-asset.jawapos.com/wp-content/uploads/2019/01/keluarga-pawang-di-jepang-maafkan-macan-putih-yang-membunuhnya_m_.jpg',
-                    'caption' => 'caption here',
-                ],
-                [
-                    'phone' => '6287817274185-1632192971',
-                    'image' => 'https://farm4.staticflickr.com/3075/3168662394_7d7103de7d_z_d.jpg',
-                    'caption' => 'Image to group',
-                    'isGroup' => true,
-                ],
-            ];
+               $payload = [
+                    [
+                        'phone' => '6281229889541',
+                        'image' => 'https://cdn-asset.jawapos.com/wp-content/uploads/2019/01/keluarga-pawang-di-jepang-maafkan-macan-putih-yang-membunuhnya_m_.jpg',
+                        'caption' => 'caption here',
+                    ],
+                    [
+                        'phone' => '6287817274185-1632192971',
+                        'image' => 'https://farm4.staticflickr.com/3075/3168662394_7d7103de7d_z_d.jpg',
+                        'caption' => 'Image to group',
+                        'isGroup' => true,
+                    ],
+                ];
         
-   iii. Send::multiple_audio_url($data);
+    iii. Send::multiple_audio_url($data);
 
-   iv. Send::multiple_video_url($data);
+    iv. Send::multiple_video_url($data);
 
-   v. Send::multiple_document_url($data);
-
+    v. Send::multiple_document_url($data);
+    vi.
+    vii.
