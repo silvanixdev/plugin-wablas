@@ -249,5 +249,31 @@ class Send
 
         return $json_data;
     }
+
+    public static function local_document($file,$phone)
+    {
+        $url = Server::api().'send-document-from-local';
+        $filename = $file->getPathName();
+        $handle = fopen($filename,"r");
+        $data = fread($handle,filesize($filename));
+        $name = $file->getClientOriginalName();
+        $attachment = [
+            'name' => $name
+        ];
+        $payload = [
+            'phone' => $phone,
+            'caption' => null,
+            'file' => base64_encode($data),
+            'data' => json_encode($attachment)
+        ];
+        $response = Http::withHeaders([
+            'Content-Type' => 'application/json',
+            'Authorization'=> Server::token()
+        ])->post($url,$payload);
+        $json_data = $response->json();
+
+        return $json_data;
+
+    }
 }
 

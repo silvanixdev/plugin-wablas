@@ -36,7 +36,8 @@ class File
         $result = curl_exec($curl);
         curl_close($curl);
 
-        return $result;
+        $json = json_decode($result);
+        return $json->data->url;
     }
 
     public static function check_ext($file)
