@@ -13,6 +13,7 @@ class Send
         $data = [
             'phone' => $phone,
             'message' => $message,
+            'spintax' => true
         ];
         $response = Http::withHeaders([
             'Content-Type' => 'application/json',
@@ -30,6 +31,7 @@ class Send
             'phone' => $phone,
             'image' => $image,
             'caption' => $caption,
+            'spintax' => true
         ];
         $response = Http::withHeaders([
             'Content-Type' => 'application/json',
@@ -46,6 +48,7 @@ class Send
         $data = [
             'phone' => $phone,
             'audio' => $audio_url,
+            'spintax' => true
         ];
         $response = Http::withHeaders([
             'Content-Type' => 'application/json',
@@ -63,6 +66,7 @@ class Send
             'phone' => $phone,
             'video' => $video_url,
             'caption' => $caption,
+            'spintax' => true
         ];
         $response = Http::withHeaders([
             'Content-Type' => 'application/json',
@@ -79,6 +83,7 @@ class Send
         $data = [
             'phone' => $phone,
             'document' => $document_url,
+            'spintax' => true
         ];
         $response = Http::withHeaders([
             'Content-Type' => 'application/json',
@@ -157,6 +162,85 @@ class Send
     {
         $payload = [ 'data'=> $data];
         $url = Server::api().'v2/send-document';
+        $response = Http::withHeaders([
+            'Content-Type' => 'application/json',
+            'Authorization'=> Server::token()
+        ])->post($url,$payload);
+        $json_data = $response->json();
+
+        return $json_data;
+    }
+
+    public static function footer_message($phone,$message,$footer,$header=null)
+    {
+        $payload = [
+            "data" => [
+                [
+                    'phone' => $phone,
+                    'message'=> [
+                        'title' => [
+                            'type' => 'text',
+                            'content' => $header,
+                        ],
+                        'content' => $message,
+                        'footer' => $footer,
+                    ],
+                ]
+            ]
+        ];
+        $url = Server::api().'v2/send-template';
+        $response = Http::withHeaders([
+            'Content-Type' => 'application/json',
+            'Authorization'=> Server::token()
+        ])->post($url,$payload);
+        $json_data = $response->json();
+
+        return $json_data;
+    }
+
+    public static function template_message($data)
+    {
+        $payload = [ 'data'=> $data];
+        $url = Server::api().'v2/send-template';
+        $response = Http::withHeaders([
+            'Content-Type' => 'application/json',
+            'Authorization'=> Server::token()
+        ])->post($url,$payload);
+        $json_data = $response->json();
+
+        return $json_data;
+    }
+
+    public static function list_message($data)
+    {
+        $payload = [ 'data'=> $data];
+        $url = Server::api().'v2/send-list';
+        $response = Http::withHeaders([
+            'Content-Type' => 'application/json',
+            'Authorization'=> Server::token()
+        ])->post($url,$payload);
+        $json_data = $response->json();
+
+        return $json_data;
+    }
+
+    public static function location_message($data)
+    {
+        $payload = [ 'data'=> $data];
+        $url = Server::api().'v2/send-location';
+        $response = Http::withHeaders([
+            'Content-Type' => 'application/json',
+            'Authorization'=> Server::token()
+        ])->post($url,$payload);
+        $json_data = $response->json();
+
+        return $json_data;
+    }
+
+    public static function button_message($data)
+    {
+        $payload = [ 'data'=> $data];
+        $url = Server::api().'v2/send-button';
         $response = Http::withHeaders([
             'Content-Type' => 'application/json',
             'Authorization'=> Server::token()
