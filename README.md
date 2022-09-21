@@ -47,7 +47,7 @@ WABLAS_TOKEN=xxxxxxxxx
 
     vi. Send::footer_message($phone,$message,$footer,$header*);
     
-        * header is optional
+    * header is optional
 
 3. Resend Message
 
@@ -58,7 +58,7 @@ WABLAS_TOKEN=xxxxxxxxx
 
     i. Send::multiple_text($payload);
     
-    * Example Format payload text
+    * Example Format payload
     
             $payload = [
                 [
@@ -87,7 +87,7 @@ WABLAS_TOKEN=xxxxxxxxx
             
     ii. Send::multple_image_url($data);
     
-    * Example Format payload text
+    * Example Format payload
    
                $payload = [
                     [
@@ -105,7 +105,7 @@ WABLAS_TOKEN=xxxxxxxxx
         
     iii. Send::multiple_audio_url($data);
     
-    * Example Format payload text
+    * Example Format payload
    
                $payload = [
                     [
@@ -122,6 +122,8 @@ WABLAS_TOKEN=xxxxxxxxx
                 
     iv. Send::multiple_video_url($data);
     
+     * Example Format payload
+  
                 $payload = [
                     [
                         'phone' => '6281229889541',
@@ -138,6 +140,102 @@ WABLAS_TOKEN=xxxxxxxxx
 
     v. Send::multiple_document_url($data);
     
-    vi.
+    * Example Format payload
     
-    vii.
+                 $payload = [
+                            [
+                                'phone' => '6281229889541',
+                                'document' => 'https://africau.edu/images/default/sample.pdf',
+                            ],
+                            [
+                                'phone' => '6287817274185-1632192971',
+                                'document' => 'https://africau.edu/images/default/sample.pdf',
+                                'isGroup' => true,
+                            ],
+                        ];
+    
+    vi. Send::template_message($payload);
+    
+      * Example Format payload
+        
+               $payload = [
+                    [
+                       'phone' => '6285867765107',
+                        'message'=> [
+                            'title' => [
+                                'type' => 'text',
+                                'content' => 'template text',
+                            ],
+                            'buttons' => [
+                                'url' => [
+                                    'display' => 'wablas.com',
+                                    'link' => 'https://wablas.com',
+                                ],
+                                'call' => [
+                                    'display' => 'contact us',
+                                    'phone' => '081223644xxx',
+                                ],
+                                'quickReply' => ["reply 1","reply 2"],
+                            ],
+                            'content' => 'sending template message...',
+                            'footer' => 'footer template here',
+                        ]
+                    ]
+                ];  
+    
+    vii. Send::list_message($payload);
+    
+     * Example Format payload
+     
+              $payload = [
+                    [
+                        'phone' => '6285867765107',
+                        'message'=> [
+                            'title' => 'Title Here',
+                            'description' => 'This is template message',
+                            'buttonText' => 'Opsi',
+                            'lists' => [
+                                [
+                                    'title' => 'List 1',
+                                    'description' => 'This is list 1',
+                                ],
+                                [
+                                    'title' => 'List 2',
+                                    'description' => 'This is list 2',
+                                ],
+                            ],
+                            'footer' => 'Footer message here.',
+                        ],
+                    ]
+                ];
+
+    viii. Send::location_message($payload);
+    
+    * Example payload format
+
+             $payload = [
+                [
+                    'phone' => '6285867765107',
+                    'message' => [
+                        'name' => 'place name',
+                        'address' => 'street name',
+                        'latitude' => 24.121231,
+                        'longitude' => 55.1121221,
+                    ],
+                ]
+            ];
+    
+    ix. Send::button_message($pauload);
+    
+    * Example payload format
+
+          $payload = [
+                [
+                    'phone' => '6285867765107',
+                    'message' => [
+                        'buttons' => ["Reply 1","Reply 2","Reply 3"],
+                        'content' => 'This is example button message',
+                        'footer' => 'this is footer message',
+                    ],
+                ]
+            ];
