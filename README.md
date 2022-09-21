@@ -1,12 +1,35 @@
-# env
+# Official Package Wablas.com
 
-WABLAS_SERVER=solo*
+Ini merupakan package yang dikembangkan oleh [Wablas.com](https://wablas.com), 
+untuk mempermudah dalam melakukan implementasikan fitur-fitur yang dimiliki oleh [Wablas.com](https://wablas.com).
 
-WABLAS_TOKEN=xxxxxxxxx
+## Fitur
 
-*available server : solo,eu,pati,jogja,texas,kudus
+* Info Device
+* Send Text Message
 
-# List Command
+## Peringatan
+
+```
+Aplikasi ini gratis dan open source dan boleh digunakan siapa saja tanpa dikenai biaya apapun.
+Hal yang tidak boleh dilakukan adalah memperjualbelikan/mengambil keuntungan dari aplikasi ini dalam bentuk apapun tanpa seijin pembuat software (PT. Manunggal Teknologi Indonesia).
+Bagi yang dengan sengaja memperjualbelikan/mengambil keuntungan dari aplikasi ini, kami sumpahi sial dan melarat 1.000.000 turunan.
+Karena kami tidak rela karya kami dibajak tanpa ijin.
+```
+
+## Tahapan Instalasi
+
+```bash
+# Tambahkan di file .env 
+# Token bisa didapatkan di wablass.com pada menu device - setting
+$ WABLAS_TOKEN=
+
+# tentukan dimana akun anda terdaftar diwablas.com. saat ini server yang ada di wablas adalah: solo, pati, kudus, jogja, texas dan eu.
+$ WABLAS_SERVER=
+
+```
+
+# Example
 
 1. Device Info
 
@@ -319,3 +342,13 @@ WABLAS_TOKEN=xxxxxxxxx
                 <input type="file" name="file">
                 <button type="submit"> Submit</button>
             </form>
+
+## License
+
+[Aladdin Free Public License](https://en.wikipedia.org/wiki/Aladdin_Free_Public_License)
+
+## Donation
+
+If this project help you reduce time to develop, you can give me a cup of coffee :)
+
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=muh.yanun%40gmail%2ecom&lc=ID&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted)
