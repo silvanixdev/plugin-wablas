@@ -247,7 +247,8 @@ WABLAS_TOKEN=xxxxxxxxx
     Example :
     
     - Controller
-                    ....
+    
+                    ...
 
                     use Silvanix\Wablas\File;
 
@@ -270,7 +271,7 @@ WABLAS_TOKEN=xxxxxxxxx
                                 
     - View
     
-        ....
+            ...
         
             <form class="needs-validation" novalidate method="post" action="{{ route('store') }}" enctype="multipart/form-data" >
             @csrf
