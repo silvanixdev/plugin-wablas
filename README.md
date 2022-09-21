@@ -29,7 +29,7 @@ $ WABLAS_SERVER=
 
 ```
 
-# Example
+# Documentation
 
 1. Device Info
 
