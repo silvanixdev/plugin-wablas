@@ -51,13 +51,13 @@ $ WABLAS_SERVER=
     
     i. Send::single_text($phone',$message);
 
-    ii. Send::single_image_url($phone',$image_url,$caption^);
+    ii. Send::single_image($phone',$image_url,$caption^);
 
-    iii. Send::single_audio_url($phone',$image_url);
+    iii. Send::single_audio($phone',$image_url);
 
-    iv. Send::single_video_url($phone',$image_url,$caption^);
+    iv. Send::single_video($phone',$image_url,$caption^);
 
-    v. Send::single_document_url($phone',$image_url);
+    v. Send::single_document($phone',$image_url);
 
     note : 
     
@@ -120,7 +120,7 @@ $ WABLAS_SERVER=
             ];
             
             
-    ii. Send::multple_image_url($data);
+    ii. Send::multple_image($data);
     
     * Example Format payload
    
@@ -138,7 +138,7 @@ $ WABLAS_SERVER=
                     ],
                 ];
         
-    iii. Send::multiple_audio_url($data);
+    iii. Send::multiple_audio($data);
     
     * Example Format payload
    
@@ -155,7 +155,7 @@ $ WABLAS_SERVER=
                     ],
                 ];
                 
-    iv. Send::multiple_video_url($data);
+    iv. Send::multiple_video($data);
     
      * Example Format payload
   
@@ -173,7 +173,7 @@ $ WABLAS_SERVER=
                     ],
                 ];
 
-    v. Send::multiple_document_url($data);
+    v. Send::multiple_document($data);
     
     * Example Format payload
     
