@@ -7,6 +7,16 @@ untuk mempermudah dalam melakukan implementasikan fitur-fitur yang dimiliki oleh
 
 * Info Device
 * Send Text Message
+* Send Media Message (Image, Video, Audio, Document)
+* Send Button Message
+* Send Footer Message
+* Send Template Message
+* Send Location Message
+* Send List Message
+* Send Document From Local Upload
+* Resend Message by Id
+* Upload File
+
 
 ## Peringatan
 
