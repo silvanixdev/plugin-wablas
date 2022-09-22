@@ -53,11 +53,11 @@ $ WABLAS_SERVER=
 
     ii. Send::single_image($phone',$image_url,$caption^);
 
-    iii. Send::single_audio($phone',$image_url);
+    iii. Send::single_audio($phone',$audio_url);
 
-    iv. Send::single_video($phone',$image_url,$caption^);
+    iv. Send::single_video($phone',$video_url,$caption^);
 
-    v. Send::single_document($phone',$image_url);
+    v. Send::single_document($phone',$document_url);
 
     note : 
     
