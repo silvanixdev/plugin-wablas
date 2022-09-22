@@ -61,7 +61,7 @@ $ WABLAS_SERVER=
 
     note : 
     
-      - caption is optional
+      - $caption is optional
     
       - you can use multiple phone separated by comma(,)
     
@@ -74,7 +74,7 @@ $ WABLAS_SERVER=
         
         ....
         
-        $phone = '6281393961320,0812615271212,0845121212';
+        $phone = '6281393961320,62812611212,62845167552';
 
         $message = 'hello';
 
