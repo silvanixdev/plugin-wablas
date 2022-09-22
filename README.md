@@ -49,7 +49,7 @@ $ WABLAS_SERVER=
 
 2. Send Single Message
     
-    # Send::single_text($phone*,$message);
+    - Send::single_text($phone*,$message);
 
     ii. Send::single_image_url($phone*,$image_url,$caption^);
 
