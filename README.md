@@ -49,15 +49,15 @@ $ WABLAS_SERVER=
 
 2. Send Single Message
     
-    i. Send::single_text($phone',$message);
+    i. Send::single_text($phone,$message);
 
-    ii. Send::single_image($phone',$image_url,$caption);
+    ii. Send::single_image($phone,$image_url,$caption);
 
-    iii. Send::single_audio($phone',$audio_url);
+    iii. Send::single_audio($phone,$audio_url);
 
-    iv. Send::single_video($phone',$video_url,$caption);
+    iv. Send::single_video($phone,$video_url,$caption);
 
-    v. Send::single_document($phone',$document_url);
+    v. Send::single_document($phone,$document_url);
 
     note : 
     
@@ -80,7 +80,7 @@ $ WABLAS_SERVER=
 
         Send::single_text($phone,$message);
 
-    vi. Send::footer_message($phone,$message,$footer,$header*);
+    vi. Send::footer_message($phone,$message,$footer,$header);
     
     * header is optional
 
