@@ -24,7 +24,7 @@ class Send
         return $json_data;
     }
 
-    public static function single_image_url(string $phone,$image,$caption=null)
+    public static function single_image(string $phone,$image,$caption=null)
     {
         $url = Server::api().'send-image';
         $data = [
@@ -42,7 +42,7 @@ class Send
         return $json_data;
     }
 
-    public static function single_audio_url(string $phone, $audio_url)
+    public static function single_audio(string $phone, $audio_url)
     {
         $url = Server::api().'send-audio';
         $data = [
@@ -59,7 +59,7 @@ class Send
         return $json_data;
     }
 
-    public static function single_video_url(string $phone,$video_url,$caption= null)
+    public static function single_video(string $phone,$video_url,$caption= null)
     {
         $url = Server::api().'send-video';
         $data = [
@@ -77,7 +77,7 @@ class Send
         return $json_data;
     }
 
-    public static function single_document_url(string $phone,$document_url)
+    public static function single_document(string $phone,$document_url)
     {
         $url = Server::api().'send-document';
         $data = [
@@ -119,7 +119,7 @@ class Send
         return $json_data;
     }
 
-    public static function multiple_image_url($data)
+    public static function multiple_image($data)
     {
         $payload = [ 'data'=> $data];
         $url = Server::api().'v2/send-image';
@@ -132,7 +132,7 @@ class Send
         return $json_data;
     }
 
-    public static function multiple_video_url($data)
+    public static function multiple_video($data)
     {
         $payload = [ 'data'=> $data];
         $url = Server::api().'v2/send-video';
@@ -145,7 +145,7 @@ class Send
         return $json_data;
     }
 
-    public static function multiple_audio_url($data)
+    public static function multiple_audio($data)
     {
         $payload = [ 'data'=> $data];
         $url = Server::api().'v2/send-audio';
@@ -158,7 +158,7 @@ class Send
         return $json_data;
     }
 
-    public static function multiple_document_url($data)
+    public static function multiple_document($data)
     {
         $payload = [ 'data'=> $data];
         $url = Server::api().'v2/send-document';
