@@ -273,67 +273,6 @@ $ WABLAS_SERVER=
                     ],
                 ]
             ];
-          
-    x. Send::schedule_message($payload);
-    
-    * Example payload
-    
-        -Simple Text Message
-        
-            $payload = [
-                [
-                    'category' => 'text',
-                    'phone' => '6285867765107',
-                    'scheduled_at' => '2022-09-22 09:46:30',
-                    'text' => 'Hallo kakak',
-                ]
-            ];
-            
-        -Multiple Category Message
-        
-            $payload = [
-                [
-                    'category' => 'image',
-                    'phone' => '62812185122343',
-                    'scheduled_at' => '2022-05-20 13:20:00',
-                    'text' => 'Cover Novel',
-                    'url' => ' https://solo.wablas.com/image/20220315081917.jpeg',
-                ],
-                [
-                    'category' => 'template',
-                    'phone' => '6281218567323',
-                    'scheduled_at' => '2022-05-20 13:20:00',
-                    'text' => [
-                        'title' => [
-                            'type' => 'image',
-                            'content' => 'https://cdn-asset.jawapos.com/wp-content/uploads/2019/01/keluarga-pawang-di-jepang-maafkan-macan-putih-yang-membunuhnya_m_.jpg',
-                        ],
-                        'buttons' => [
-                            'url' => [
-                                'display' => 'wablas.com',
-                                'link' => 'https://wablas.com',
-                            ],
-                            'call' => [
-                                'display' => 'contact us',
-                                'link' => '081223644660',
-                            ],
-                            'quickReply' => ["reply 1","reply 2"],
-                        ],
-                        'content' => 'sending template message...',
-                        'footer' => 'footer template here',
-                    ],
-                ],
-                [
-                    'category' => 'button',
-                    'phone' => '62812112121212',
-                    'scheduled_at' => '2022-05-20 13:20:00',
-                    'text' => [
-                        'buttons' => ["button 1","button 2","button 3"],
-                        'content' => 'sending template message...',
-                        'footer' => 'footer template here',
-                    ],
-                ],
-            ];
         
 5. File Upload
 
@@ -414,7 +353,74 @@ $ WABLAS_SERVER=
                 <input type="file" name="file">
                 <button type="submit"> Submit</button>
             </form>
+            
+ 7. Schedule Message
+ 
+    i. Schedule::new_message($payload);
+    
+    * Example payload
+    
+        -Simple Text Message
+        
+            $payload = [
+                [
+                    'category' => 'text',
+                    'phone' => '6285867765107',
+                    'scheduled_at' => '2022-09-22 09:46:30',
+                    'text' => 'Hallo kakak',
+                ]
+            ];
+            
+        -Multiple Category Message
+        
+            $payload = [
+                [
+                    'category' => 'image',
+                    'phone' => '62812185122343',
+                    'scheduled_at' => '2022-05-20 13:20:00',
+                    'text' => 'Cover Novel',
+                    'url' => ' https://solo.wablas.com/image/20220315081917.jpeg',
+                ],
+                [
+                    'category' => 'template',
+                    'phone' => '6281218567323',
+                    'scheduled_at' => '2022-05-20 13:20:00',
+                    'text' => [
+                        'title' => [
+                            'type' => 'image',
+                            'content' => 'https://cdn-asset.jawapos.com/wp-content/uploads/2019/01/keluarga-pawang-di-jepang-maafkan-macan-putih-yang-membunuhnya_m_.jpg',
+                        ],
+                        'buttons' => [
+                            'url' => [
+                                'display' => 'wablas.com',
+                                'link' => 'https://wablas.com',
+                            ],
+                            'call' => [
+                                'display' => 'contact us',
+                                'link' => '081223644660',
+                            ],
+                            'quickReply' => ["reply 1","reply 2"],
+                        ],
+                        'content' => 'sending template message...',
+                        'footer' => 'footer template here',
+                    ],
+                ],
+                [
+                    'category' => 'button',
+                    'phone' => '62812112121212',
+                    'scheduled_at' => '2022-05-20 13:20:00',
+                    'text' => [
+                        'buttons' => ["button 1","button 2","button 3"],
+                        'content' => 'sending template message...',
+                        'footer' => 'footer template here',
+                    ],
+                ],
+            ];  
 
+    ii. Schedule::cancel($id);
+    
+    iii. Schedule::delete($id);
+    
 ## License
 
 [Aladdin Free Public License](https://en.wikipedia.org/wiki/Aladdin_Free_Public_License)
