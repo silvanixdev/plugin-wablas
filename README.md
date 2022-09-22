@@ -49,21 +49,21 @@ $ WABLAS_SERVER=
 
 2. Send Single Message
     
-    i. Send::single_text($phone*,$message);
+    i. Send::single_text($phone',$message);
 
-    ii. Send::single_image_url($phone*,$image_url,$caption^);
+    ii. Send::single_image_url($phone',$image_url,$caption^);
 
-    iii. Send::single_audio_url($phone*,$image_url);
+    iii. Send::single_audio_url($phone',$image_url);
 
-    iv. Send::single_video_url($phone*,$image_url,$caption^);
+    iv. Send::single_video_url($phone',$image_url,$caption^);
 
-    v. Send::single_document_url($phone*,$image_url);
+    v. Send::single_document_url($phone',$image_url);
 
     note : 
     
     ^ caption is optional
     
-    * you can use multiple phone separated by comma(,)
+    ' you can use multiple phone separated by comma(,)
     
     Example :
     
