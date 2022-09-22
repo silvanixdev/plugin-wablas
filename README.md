@@ -49,7 +49,7 @@ $ WABLAS_SERVER=
 
 2. Send Single Message
     
-    - Send::single_text($phone*,$message);
+    i. Send::single_text($phone*,$message);
 
     ii. Send::single_image_url($phone*,$image_url,$caption^);
 
@@ -63,7 +63,7 @@ $ WABLAS_SERVER=
     
     ^ caption is optional
     
-    ** you can use multiple phone separated by comma(,)
+    * you can use multiple phone separated by comma(,)
     
     Example :
     
