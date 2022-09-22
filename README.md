@@ -13,11 +13,12 @@ untuk mempermudah dalam melakukan implementasikan fitur-fitur yang dimiliki oleh
 * Send Template Message
 * Send Location Message
 * Send List Message
-* Send Schedule Message
 * Send Document From Local Upload
-* Resend Message by Id
+* Resend Message by ID
 * Upload File
-
+* Schedule Message
+* Cancel Schedule by ID
+* Delete Schedule by ID
 
 ## Peringatan
 
@@ -48,7 +49,7 @@ $ WABLAS_SERVER=
 
 2. Send Single Message
     
-    i. Send::single_text($phone*,$message);
+    # Send::single_text($phone*,$message);
 
     ii. Send::single_image_url($phone*,$image_url,$caption^);
 
