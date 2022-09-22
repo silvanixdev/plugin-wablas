@@ -120,7 +120,7 @@ $ WABLAS_SERVER=
             ];
             
             
-    ii. Send::multple_image($data);
+    ii. Send::multiple_image($data);
     
     * Example Format payload
    
