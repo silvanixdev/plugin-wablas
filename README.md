@@ -6,6 +6,8 @@ untuk mempermudah dalam melakukan implementasikan fitur-fitur yang dimiliki oleh
 ## Fitur
 
 * Info Device
+* Restart Device
+* Disconnect Device
 * Send Text Message
 * Send Media Message (Image, Video, Audio, Document)
 * Send Button Message
@@ -45,7 +47,11 @@ $ WABLAS_SERVER=
 
 1. Device Info
 
-    Device::info();
+    i. Device::info();
+    
+    ii. Device::restart();
+    
+    iii. Device::disconnect();
 
 2. Send Single Message
     
