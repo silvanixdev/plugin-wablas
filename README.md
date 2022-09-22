@@ -13,6 +13,7 @@ untuk mempermudah dalam melakukan implementasikan fitur-fitur yang dimiliki oleh
 * Send Template Message
 * Send Location Message
 * Send List Message
+* Send Schedule Message
 * Send Document From Local Upload
 * Resend Message by Id
 * Upload File
