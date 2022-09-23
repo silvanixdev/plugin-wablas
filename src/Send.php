@@ -275,5 +275,41 @@ class Send
         return $json_data;
     }
 
+    public static function local_file($file,$phone,$caption=null)
+    {
+        $type = File::check_ext($file);
+
+        if($type === null)
+        {
+            return 'invalid file';
+        }
+
+        $url = Server::api()."send-$type-from-local";
+        $token = Server::token();
+        $rawData = $file->getPathName();
+        $mime = $file->getMimeType();
+        $name = $file->getClientOriginalName();
+
+        $data = new \CURLFile($rawData,$mime,$name);
+        $curl = curl_init();
+        curl_setopt($curl, CURLOPT_HTTPHEADER,
+            array(
+                "Authorization: $token",
+            )
+        );
+        curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "POST");
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($curl, CURLOPT_POSTFIELDS, array('file'=>$data,'phone'=>$phone,'caption'=>$caption));
+        curl_setopt($curl, CURLOPT_URL, $url);
+        curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
+        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
+        $result = curl_exec($curl);
+        curl_close($curl);
+
+        $json = json_decode($result);
+
+        return $json;
+    }
+
 }
 
