@@ -21,6 +21,7 @@ untuk mempermudah dalam melakukan implementasikan fitur-fitur yang dimiliki oleh
 * Schedule Message
 * Cancel Schedule by ID
 * Delete Schedule by ID
+* Send FIle From Local (Image, VIdeo, Audio)
 
 ## Peringatan
 
@@ -427,7 +428,51 @@ $ WABLAS_SERVER=
     ii. Schedule::cancel($id);
     
     iii. Schedule::delete($id);
+
+ 6. Send Local File (Image, Audio, Video)
     
+    i. Send::local_file($file,$phones,$caption);
+    
+    Example :
+    
+    - Controller
+    
+                    ...
+
+                    use Silvanix\Wablas\Send;
+
+                    ...
+
+                        public function store(Request $request)
+                        {
+                            $phones = $request->phones;
+                            $caption = $request->caption;
+                            $file = $request->file('file');
+                            $test = Send::local_file($file,$phones,$phone);
+                            echo $test;
+                        }
+                        
+    - Route
+                
+                ...
+                
+                Route::post('.../store', [App\Http\Controllers\SomeController::class, 'store'])->name('store');
+                
+                ...
+                                
+    - View
+    
+            ...
+        
+            <form class="needs-validation" novalidate method="post" action="{{ route('store') }}" enctype="multipart/form-data" >
+            @csrf
+                <input type="text" placeholder="081393961320,0821212122,08128282812"name='phones'>
+                <input type="text" name="caption">
+                <input type="file" name="file">
+                <button type="submit"> Submit</button>
+            </form>
+            
+            ...
 ## License
 
 [Aladdin Free Public License](https://en.wikipedia.org/wiki/Aladdin_Free_Public_License)
