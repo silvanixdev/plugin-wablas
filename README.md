@@ -21,7 +21,7 @@ untuk mempermudah dalam melakukan implementasikan fitur-fitur yang dimiliki oleh
 * Schedule Message
 * Cancel Schedule by ID
 * Delete Schedule by ID
-* Send FIle From Local (Image, VIdeo, Audio)
+* Send FIle From Local (Image, Video, Audio)
 
 ## Peringatan
 
