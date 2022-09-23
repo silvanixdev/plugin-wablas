@@ -15,13 +15,13 @@ untuk mempermudah dalam melakukan implementasikan fitur-fitur yang dimiliki oleh
 * Send Template Message
 * Send Location Message
 * Send List Message
-* Send Document From Local Upload
+* Send Document From Local Upload (PDF, Words Files, Excel Files, PPT)
+* Send File From Local (Image, Video, Audio)
 * Resend Message by ID
 * Upload File
 * Schedule Message
 * Cancel Schedule by ID
 * Delete Schedule by ID
-* Send FIle From Local (Image, Video, Audio)
 
 ## Peringatan
 
