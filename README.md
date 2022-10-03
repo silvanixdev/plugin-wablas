@@ -8,6 +8,7 @@ untuk mempermudah dalam melakukan implementasikan fitur-fitur yang dimiliki oleh
 * Info Device
 * Restart Device
 * Disconnect Device
+* Check Phone
 * Send Text Message
 * Send Media Message (Image, Video, Audio, Document)
 * Send Button Message
@@ -53,8 +54,16 @@ $ WABLAS_SERVER=
     ii. Device::restart();
     
     iii. Device::disconnect();
+    
+2. Check Phone
 
-2. Send Single Message
+    use this to check Whatsapp Number is active or not
+    
+    i. Phone::check($phones);
+
+    - you can use multiple phone separated by comma(,)
+  
+3. Send Single Message
     
     i. Send::single_text($phone,$message);
 
@@ -91,12 +100,12 @@ $ WABLAS_SERVER=
     
     * header is optional
 
-3. Resend Message
+4. Resend Message
 
     Send::again($id);
 
 
-4. Send Multiple Message
+5. Send Multiple Message
 
     i. Send::multiple_text($payload);
     
@@ -282,7 +291,7 @@ $ WABLAS_SERVER=
                 ]
             ];
         
-5. File Upload
+6. File Upload
 
     i. File::local_upload($file);
     
@@ -321,7 +330,7 @@ $ WABLAS_SERVER=
                 <button type="submit"> Submit</button>
             </form>
             
- 6. Send Local Document
+ 7. Send Local Document
     
     i. Send::local_document($file,$phones);
     
@@ -362,7 +371,7 @@ $ WABLAS_SERVER=
                 <button type="submit"> Submit</button>
             </form>
             
- 7. Schedule Message
+ 8. Schedule Message
  
     i. Schedule::new_message($payload);
     
@@ -429,7 +438,7 @@ $ WABLAS_SERVER=
     
     iii. Schedule::delete($id);
 
- 6. Send Local File (Image, Audio, Video)
+ 9. Send Local File (Image, Audio, Video)
     
     i. Send::local_file($file,$phones,$caption);
     
