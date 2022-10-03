@@ -15,4 +15,12 @@ class Server
     {
         return env('WABLAS_TOKEN');
     }
+
+    public static function host()
+    {
+        $server = env('WABLAS_SERVER');
+        $url = "https://$server.wablas.com";
+
+        return $url;
+    }
 }
