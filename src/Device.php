@@ -41,5 +41,5 @@ class Device
 
         return $json_data;
     }
-    
+
 }
