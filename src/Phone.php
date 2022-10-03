@@ -18,6 +18,5 @@ class Phone
         $json_data = $response->json();
 
         return $json_data;
-
     }
 }
