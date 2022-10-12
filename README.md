@@ -86,6 +86,7 @@ $ WABLAS_SERVER=
   
 ## Message
   1. Single Message 
+  
       1. single_text($phone,$message);
 
       2. single_image($phone,$image_url,$caption);
@@ -98,12 +99,12 @@ $ WABLAS_SERVER=
 
       6. footer_message($phone,$message,$footer,$header);
 
-    note : 
-    - $caption is optional
-    - you can use multiple phone separated by comma(,)
-    - header is optional
+              note : 
+              - $caption is optional
+              - you can use multiple phone separated by comma(,)
+              - header is optional
 
-    Example :
+      Example :
 
     ```PHP
     use Silvanix/Wablas/Message;
