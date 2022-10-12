@@ -70,7 +70,7 @@ $ WABLAS_SERVER=
 
   1. phone($phones);
 
-    you can use multiple phone separated by comma(,)
+      - you can use multiple phone separated by comma(,)
 
    Example :
    
@@ -99,7 +99,6 @@ $ WABLAS_SERVER=
 
       - footer_message($phone,$message,$footer,$header);
 
-        note : 
         - $caption is optional
         - you can use multiple phone separated by comma(,)
         - header is optional
@@ -107,16 +106,16 @@ $ WABLAS_SERVER=
   Example :
 
    ```PHP
-  use Silvanix/Wablas/Message;
+    use Silvanix/Wablas/Message;
 
-  $send = new Message();
-  
-  $phones ='08121211111,089888888,07812121212';
-  $message = 'hello';
-  $image = 'https://i.imgur.com/OB0y6MR.jpg';
-  
-  $send_text = $send->single_text($phones,$message);
-  $send_image =  $send->single_image($phones,$image,$message);
+    $send = new Message();
+
+    $phones ='08121211111,089888888,07812121212';
+    $message = 'hello';
+    $image = 'https://i.imgur.com/OB0y6MR.jpg';
+
+    $send_text = $send->single_text($phones,$message);
+    $send_image =  $send->single_image($phones,$image,$message);
   
   ```
 
