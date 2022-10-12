@@ -72,7 +72,7 @@ $ WABLAS_SERVER=
 
   1. phone($phones);
 
-  ###### you can use multiple phone separated by comma(,)
+    you can use multiple phone separated by comma(,)
 
    Example :
    
@@ -102,9 +102,7 @@ $ WABLAS_SERVER=
 
     note : 
     - $caption is optional
-    
     - you can use multiple phone separated by comma(,)
-    
     - header is optional
   
   Example :
@@ -121,12 +119,9 @@ $ WABLAS_SERVER=
   $send_text = $send->single_text($phones,$message);
   $send_image =  $send->single_image($phones,$image,$message);
   ```
-  
-  
-    
-    *
 
-4. Resend Message
+
+> Resend Message
 
     Send::again($id);
 
