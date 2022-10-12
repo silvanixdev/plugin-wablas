@@ -7,9 +7,11 @@ use Illuminate\Support\Facades\Http;
 
 class Device
 {
-    public static function info()
+    use Server;
+
+    public function info()
     {
-        $url = Server::api()."device/info?token=".Server::token();
+        $url = self::api()."device/info?token=".self::token();
         $response = Http::withHeaders([
             'Content-Type' => 'application/json',
         ])->get($url);
@@ -18,9 +20,9 @@ class Device
         return $json_data;
     }
 
-    public static function disconnect()
+    public function disconnect()
     {
-        $url = Server::api().'device/disconnect';
+        $url = self::api().'device/disconnect';
         $response = Http::withHeaders([
             'Content-Type' => 'application/json',
             'Authorization'=> Server::token()
@@ -30,12 +32,12 @@ class Device
         return $json_data;
     }
 
-    public static function restart()
+    public function restart()
     {
-        $url = Server::api().'device/restart';
+        $url = self::api().'device/restart';
         $response = Http::withHeaders([
             'Content-Type' => 'application/json',
-            'Authorization'=> Server::token()
+            'Authorization'=> self::token()
         ])->get($url);
         $json_data = $response->json();
 

@@ -7,13 +7,15 @@ use Silvanix\Wablas\Server;
 
 class Schedule
 {
-   public static function new_message($data)
+    use Server;
+
+    public static function new_message($data)
     {
         $payload = [ 'data'=> $data];
-        $url = Server::api().'v2/schedule';
+        $url = self::api().'v2/schedule';
         $response = Http::withHeaders([
             'Content-Type' => 'application/json',
-            'Authorization'=> Server::token()
+            'Authorization'=> self::token()
         ])->post($url,$payload);
 
         $json_data = $response->json();
@@ -23,10 +25,10 @@ class Schedule
 
     public static function cancel($id)
     {
-        $url = Server::api()."schedule-cancel/$id";
+        $url = self::api()."schedule-cancel/$id";
         $response = Http::withHeaders([
             'Content-Type' => 'application/json',
-            'Authorization'=> Server::token()
+            'Authorization'=> self::token()
         ])->put($url);
         $json_data = $response->json();
 
@@ -35,10 +37,10 @@ class Schedule
 
     public static function delete($id)
     {
-        $url = Server::api()."schedule/$id";
+        $url = self::api()."schedule/$id";
         $response = Http::withHeaders([
             'Content-Type' => 'application/json',
-            'Authorization'=> Server::token()
+            'Authorization'=> self::token()
         ])->delete($url);
         $json_data = $response->json();
 
