@@ -86,17 +86,22 @@ $ WABLAS_SERVER=
   
 ## Message
   1. Single Message 
-    1. single_text($phone,$message);
-    2. single_image($phone,$image_url,$caption);
-    3. single_audio($phone,$audio_url);
-    4. single_video($phone,$video_url,$caption);
-    5. single_document($phone,$document_url);
-    6. footer_message($phone,$message,$footer,$header);
+      1. single_text($phone,$message);
 
-      note : 
-      - $caption is optional
-      - you can use multiple phone separated by comma(,)
-      - header is optional
+      2. single_image($phone,$image_url,$caption);
+
+      3. single_audio($phone,$audio_url);
+
+      4. single_video($phone,$video_url,$caption);
+
+      5. single_document($phone,$document_url);
+
+      6. footer_message($phone,$message,$footer,$header);
+
+    note : 
+    - $caption is optional
+    - you can use multiple phone separated by comma(,)
+    - header is optional
 
     Example :
 
