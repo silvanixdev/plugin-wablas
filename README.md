@@ -218,36 +218,39 @@ $ WABLAS_SERVER=
    - multiple_video($data);
     
      Example Format payload
-  
-                $payload = [
-                    [
-                        'phone' => '6281229889541',
-                        'video' => 'https://prof3ssorst3v3.github.io/media-sample-files/lion-sample.mp4',
-                        'caption' => 'this caption optional',
-                    ],
-                    [
-                        'phone' => '6287817274185-1632192971',
-                        'video' => 'https://prof3ssorst3v3.github.io/media-sample-files/lion-sample.mp4',
-                         'caption' => 'Image to group',
-                        'isGroup' => true,
-                    ],
-                ];
-
-    v. Send::multiple_document($data);
+      ```PHP
+      $payload = [
+          [
+              'phone' => '6281229889541',
+              'video' => 'https://prof3ssorst3v3.github.io/media-sample-files/lion-sample.mp4',
+              'caption' => 'this caption optional',
+          ],
+          [
+              'phone' => '6287817274185-1632192971',
+              'video' => 'https://prof3ssorst3v3.github.io/media-sample-files/lion-sample.mp4',
+               'caption' => 'Image to group',
+              'isGroup' => true,
+          ],
+      ];
+      ```
+               
+   - Send::multiple_document($data);
     
-    * Example Format payload
-    
-                 $payload = [
-                            [
-                                'phone' => '6281229889541',
-                                'document' => 'https://africau.edu/images/default/sample.pdf',
-                            ],
-                            [
-                                'phone' => '6287817274185-1632192971',
-                                'document' => 'https://africau.edu/images/default/sample.pdf',
-                                'isGroup' => true,
-                            ],
-                        ];
+   Example Format payload
+      ```PHP
+      $payload = [
+          [
+              'phone' => '6281229889541',
+              'document' => 'https://africau.edu/images/default/sample.pdf',
+          ],
+          [
+              'phone' => '6287817274185-1632192971',
+              'document' => 'https://africau.edu/images/default/sample.pdf',
+              'isGroup' => true,
+          ],
+      ];
+      ```
+                
     
     vi. Send::template_message($payload);
     
