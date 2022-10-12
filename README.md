@@ -87,38 +87,38 @@ $ WABLAS_SERVER=
 ## Message
   1. Single Message 
   
-      1. single_text($phone,$message);
+  - single_text($phone,$message);
 
-      2. single_image($phone,$image_url,$caption);
+  - single_image($phone,$image_url,$caption);
 
-      3. single_audio($phone,$audio_url);
+  - single_audio($phone,$audio_url);
 
-      4. single_video($phone,$video_url,$caption);
+  - single_video($phone,$video_url,$caption);
 
-      5. single_document($phone,$document_url);
+  - single_document($phone,$document_url);
 
-      6. footer_message($phone,$message,$footer,$header);
+  - footer_message($phone,$message,$footer,$header);
 
-              note : 
-              - $caption is optional
-              - you can use multiple phone separated by comma(,)
-              - header is optional
+    note : 
+    - $caption is optional
+    - you can use multiple phone separated by comma(,)
+    - header is optional
 
-      Example :
+  Example :
 
-    ```PHP
-    use Silvanix/Wablas/Message;
+   ```PHP
+  use Silvanix/Wablas/Message;
 
-    $send = new Message();
-
-    $phones = '0811111,082222222,089888888'
-    $message = 'hello';
-    $image = 'https://i.imgur.com/OB0y6MR.jpg';
-
-    $send_text = $send->single_text($phones,$message);
-    $send_image =  $send->single_image($phones,$image,$message);
-    ```
-
+  $send = new Message();
+  
+  $phones ='08121211111,089888888,07812121212';
+  $message = 'hello';
+  $image = 'https://i.imgur.com/OB0y6MR.jpg';
+  
+  $send_text = $send->single_text($phones,$message);
+  $send_image =  $send->single_image($phones,$image,$message);
+  
+  ```
 
 ## Resend Message
 
