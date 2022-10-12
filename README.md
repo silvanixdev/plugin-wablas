@@ -56,7 +56,7 @@ ii. restart();
 iii. disconnect();
 
 Example :
-```ruby
+```Shell
     ...
     use Silvanix/Wablas/Device;
     ...
