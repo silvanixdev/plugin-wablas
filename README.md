@@ -72,8 +72,7 @@ $ WABLAS_SERVER=
 
       - you can use multiple phone separated by comma(,)
 
-   Example :
-   
+        Example :
   ```PHP
     use Silvanix/Wablas/Check;
 
@@ -103,7 +102,7 @@ $ WABLAS_SERVER=
         - you can use multiple phone separated by comma(,)
         - header is optional
 
-  Example :
+        Example :
 
    ```PHP
     use Silvanix/Wablas/Message;
@@ -123,7 +122,7 @@ $ WABLAS_SERVER=
 
       - again($id);
       
-  Example :
+        Example :
   
   ```PHP
     use Silvanix/Wablas/Message;
@@ -140,7 +139,7 @@ $ WABLAS_SERVER=
 
       - multiple_text($payload);
     
-  Example Format payload :
+        Example Format payload :
     
   ```PHP
     use Silvanix/Wablas/Message;
