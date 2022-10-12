@@ -23,6 +23,9 @@ untuk mempermudah dalam melakukan implementasikan fitur-fitur yang dimiliki oleh
 * Schedule Message
 * Cancel Schedule by ID
 * Delete Schedule by ID
+* Cancel Pending Message by ID
+* Cancel All Pending Message
+* Revoke Message
 
 ## Peringatan
 
@@ -190,11 +193,9 @@ $ WABLAS_SERVER=
               'isGroup' => true,
           ],
       ];
-        
+      ```
   
-  ```
-    
-          - Send::multiple_audio($data);
+   - multiple_audio($data);
     
      Example Format payload
      
@@ -214,9 +215,9 @@ $ WABLAS_SERVER=
    ```
             
                 
-    iv. Send::multiple_video($data);
+   - multiple_video($data);
     
-     * Example Format payload
+     Example Format payload
   
                 $payload = [
                     [
