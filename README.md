@@ -45,9 +45,9 @@ $ WABLAS_SERVER=
 
 ```
 
-# Documentation
+## Documentation
 
-### Device
+######  Device
 
 1. info();
 
