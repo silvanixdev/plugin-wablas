@@ -130,7 +130,6 @@ $ WABLAS_SERVER=
     $send = new Message();
 
     $id ='lkasjndl-k8792173kjsaas';
-
     $resend = $send->again($id);
   
   ```
@@ -172,14 +171,15 @@ $ WABLAS_SERVER=
   $send_text = $send->multiple_text($payload);
   
   ```
-           
-            
-            
-    ii. Send::multiple_image($data);
-    
-    * Example Format payload
+      
+      
+   - multiple_image($data);
    
-               $payload = [
+     Example Format payload
+    
+        
+    ```PHP
+     $payload = [
                     [
                         'phone' => '6281229889541',
                         'image' => 'https://cdn-asset.jawapos.com/wp-content/uploads/2019/01/keluarga-pawang-di-jepang-maafkan-macan-putih-yang-membunuhnya_m_.jpg',
@@ -191,7 +191,7 @@ $ WABLAS_SERVER=
                         'caption' => 'Image to group',
                         'isGroup' => true,
                     ],
-                ];
+                ];```
         
     iii. Send::multiple_audio($data);
     
