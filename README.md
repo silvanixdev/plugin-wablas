@@ -47,13 +47,13 @@ $ WABLAS_SERVER=
 
 # Documentation
 
-1. Device Info
+### Device Info
 
-    i. Device::info();
+    i. info();
     
-    ii. Device::restart();
+    ii. restart();
     
-    iii. Device::disconnect();
+    iii. disconnect();
     
 2. Check Phone
 
