@@ -65,8 +65,7 @@ $info = $device->info();
 $restart = $device->restart();
 $disconnect = $device->disconnect();
 ```
-
-### Phone
+> Phone
 
 use this to check Whatsapp Number is active or not
 
