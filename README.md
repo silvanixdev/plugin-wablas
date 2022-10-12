@@ -100,13 +100,13 @@ $ WABLAS_SERVER=
  
   6. footer_message($phone,$message,$footer,$header);
 
-  note : 
+    note : 
 
-  - $caption is optional
+    - $caption is optional
 
-  - you can use multiple phone separated by comma(,)
-   
-  - header is optional
+    - you can use multiple phone separated by comma(,)
+
+    - header is optional
   
   Example :
   
