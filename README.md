@@ -72,7 +72,7 @@ $ WABLAS_SERVER=
 
   1. phone($phones);
 
-  - you can use multiple phone separated by comma(,)
+  ###### you can use multiple phone separated by comma(,)
 
    Example :
    
@@ -101,11 +101,10 @@ $ WABLAS_SERVER=
   6. footer_message($phone,$message,$footer,$header);
 
     note : 
-
     - $caption is optional
-
+    
     - you can use multiple phone separated by comma(,)
-
+    
     - header is optional
   
   Example :
