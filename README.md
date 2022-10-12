@@ -56,7 +56,7 @@ ii. restart();
 iii. disconnect();
 
 Example :
-```
+```C
     ...
     use Silvanix/Wablas/Device;
     ...
