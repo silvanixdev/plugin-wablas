@@ -56,7 +56,7 @@ ii. restart();
 iii. disconnect();
 
 Example :
-```Shell
+```PHP
     ...
     use Silvanix/Wablas/Device;
     ...
