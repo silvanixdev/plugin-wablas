@@ -45,9 +45,7 @@ $ WABLAS_SERVER=
 
 ```
 
-## Documentation
-
-> Device
+## Device
 
   1. info();
 
@@ -66,7 +64,7 @@ $ WABLAS_SERVER=
   $disconnect = $device->disconnect();
   ```
   
-> Check
+## Check
 
   use this to check Whatsapp Number is active or not
 
@@ -86,7 +84,7 @@ $ WABLAS_SERVER=
 
   ```
   
-> Message
+## Message
     
   1. single_text($phone,$message);
 
@@ -121,7 +119,7 @@ $ WABLAS_SERVER=
   ```
 
 
-> Resend Message
+## Resend Message
 
     Send::again($id);
 
