@@ -48,12 +48,13 @@ $ WABLAS_SERVER=
 # Documentation
 
 ### Device Info
-``i. info();
+
+i. info();
 
 ii. restart();
 
 iii. disconnect();
-    ``
+
 2. Check Phone
 
     use this to check Whatsapp Number is active or not
