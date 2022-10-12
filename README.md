@@ -47,34 +47,43 @@ $ WABLAS_SERVER=
 
 # Documentation
 
-### Device Info
+### Device
 
-i. info();
+1. info();
 
-ii. restart();
+2. restart();
 
-iii. disconnect();
+3. disconnect();
 
 Example :
 ```PHP
-    use Silvanix/Wablas/Device;
-    
-    $device = new Device();
-    
-    $info = $device->info();
-    $restart = $device->restart();
-    $disconnect = $device->disconnect();
+use Silvanix/Wablas/Device;
 
+$device = new Device();
+
+$info = $device->info();
+$restart = $device->restart();
+$disconnect = $device->disconnect();
 ```
 
-2. Check Phone
+### Phone
 
-    use this to check Whatsapp Number is active or not
-    
-    i. Phone::check($phones);
+use this to check Whatsapp Number is active or not
 
-    - you can use multiple phone separated by comma(,)
-  
+1. check($phones);
+
+- you can use multiple phone separated by comma(,)
+
+ Example :
+```PHP
+use Silvanix/Wablas/Phone;
+
+$phone = new Phone();
+
+$phones ='08121211111,089888888,07812121212';
+$check = $phone->check($phones);
+
+```
 3. Send Single Message
     
     i. Send::single_text($phone,$message);
