@@ -58,13 +58,13 @@ $ WABLAS_SERVER=
 
   Example :
   ```PHP
-    use Silvanix/Wablas/Device;
+      use Silvanix/Wablas/Device;
 
-    $device = new Device();
+      $device = new Device();
 
-    $info = $device->info();
-    $restart = $device->restart();
-    $disconnect = $device->disconnect();
+      $info = $device->info();
+      $restart = $device->restart();
+      $disconnect = $device->disconnect();
   ```
   
 ## Check
@@ -77,12 +77,12 @@ $ WABLAS_SERVER=
 
         Example :
   ```PHP
-    use Silvanix/Wablas/Check;
+      use Silvanix/Wablas/Check;
 
-    $check = new Check();
+      $check = new Check();
 
-    $phones ='08121211111,089888888,07812121212';
-    $is_active = $check->phone($phones);
+      $phones ='08121211111,089888888,07812121212';
+      $is_active = $check->phone($phones);
 
   ```
   
@@ -108,16 +108,16 @@ $ WABLAS_SERVER=
         Example :
 
    ```PHP
-    use Silvanix/Wablas/Message;
+      use Silvanix/Wablas/Message;
 
-    $send = new Message();
+      $send = new Message();
 
-    $phones ='08121211111,089888888,07812121212';
-    $message = 'hello';
-    $image = 'https://i.imgur.com/OB0y6MR.jpg';
+      $phones ='08121211111,089888888,07812121212';
+      $message = 'hello';
+      $image = 'https://i.imgur.com/OB0y6MR.jpg';
 
-    $send_text = $send->single_text($phones,$message);
-    $send_image =  $send->single_image($phones,$image,$message);
+      $send_text = $send->single_text($phones,$message);
+      $send_image =  $send->single_image($phones,$image,$message);
   
   ```
 
@@ -128,12 +128,12 @@ $ WABLAS_SERVER=
         Example :
   
   ```PHP
-    use Silvanix/Wablas/Message;
+      use Silvanix/Wablas/Message;
 
-    $send = new Message();
+      $send = new Message();
 
-    $id ='lkasjndl-k8792173kjsaas';
-    $resend = $send->again($id);
+      $id ='lkasjndl-k8792173kjsaas';
+      $resend = $send->again($id);
   
   ```
 
@@ -141,34 +141,34 @@ $ WABLAS_SERVER=
 
   - multiple_text($payload);
   ```PHP
-    use Silvanix/Wablas/Message;
-  
-    $send = new Message();
-    
-    $payload = [
-      [
-          'phone' => '6281229889541',
-          'message' => 'Test Pesan 1',
-      ],
-      [
-          'phone' => '6281229889541',
-          'message' => 'Hello {name} Pesan with spintax',
-          'spintax' => true,
-          'source' => 'for personal'
-      ],
-      [
-          'phone' => '6285867765107',
-          'message' => 'Hello Pesan 3',
-          'secret' => true,
-      ],
-      [
-          'phone' => '6287817274185-1632192971',
-          'message' => 'Test Group',
-          'isGroup' => true,
-          'source' => 'group personal'
-      ],
-   ];
-  $send_text = $send->multiple_text($payload);
+      use Silvanix/Wablas/Message;
+
+      $send = new Message();
+
+      $payload = [
+        [
+            'phone' => '6281229889541',
+            'message' => 'Test Pesan 1',
+        ],
+        [
+            'phone' => '6281229889541',
+            'message' => 'Hello {name} Pesan with spintax',
+            'spintax' => true,
+            'source' => 'for personal'
+        ],
+        [
+            'phone' => '6285867765107',
+            'message' => 'Hello Pesan 3',
+            'secret' => true,
+        ],
+        [
+            'phone' => '6287817274185-1632192971',
+            'message' => 'Test Group',
+            'isGroup' => true,
+            'source' => 'group personal'
+        ],
+     ];
+    $send_text = $send->multiple_text($payload);
   
   ```
       
