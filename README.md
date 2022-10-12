@@ -136,9 +136,9 @@ $ WABLAS_SERVER=
 
   3. Send Multiple Message
 
-      - multiple_text($payload);
-    
-        Example Format payload :
+  - multiple_text($payload);
+
+    Example Format payload :
     
   ```PHP
     use Silvanix/Wablas/Message;
@@ -172,13 +172,12 @@ $ WABLAS_SERVER=
   
   ```
       
-      
    - multiple_image($data);
-   
-     Example Format payload "
-    
-    ```PHP
-      $payload = [
+
+     Example Format payload
+
+     ```PHP
+     $payload = [
           [
               'phone' => '6281229889541',
               'image' => 'https://cdn-asset.jawapos.com/wp-content/uploads/2019/01/keluarga-pawang-di-jepang-maafkan-macan-putih-yang-membunuhnya_m_.jpg',
@@ -191,11 +190,14 @@ $ WABLAS_SERVER=
               'isGroup' => true,
           ],
       ];
-     ```
         
-   - Send::multiple_audio($data);
+  
+  ```
+    
+          - Send::multiple_audio($data);
     
      Example Format payload
+     
    ```PHP
       $payload = [
           [
