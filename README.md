@@ -234,7 +234,7 @@ $ WABLAS_SERVER=
       ];
       ```
                
-   - Send::multiple_document($data);
+   - multiple_document($data);
     
       Example Format payload
       
@@ -254,64 +254,69 @@ $ WABLAS_SERVER=
       ```
                 
     
-    vi. Send::template_message($payload);
+   - template_message($payload);
     
-      * Example Format payload
-        
-               $payload = [
-                    [
-                       'phone' => '6285867765107',
-                        'message'=> [
-                            'title' => [
-                                'type' => 'text',
-                                'content' => 'template text',
-                            ],
-                            'buttons' => [
-                                'url' => [
-                                    'display' => 'wablas.com',
-                                    'link' => 'https://wablas.com',
-                                ],
-                                'call' => [
-                                    'display' => 'contact us',
-                                    'phone' => '081223644xxx',
-                                ],
-                                'quickReply' => ["reply 1","reply 2"],
-                            ],
-                            'content' => 'sending template message...',
-                            'footer' => 'footer template here',
-                        ]
-                    ]
-                ];  
+     Example Format payload
+        ```PHP
+       $payload = [
+          [
+             'phone' => '6285867765107',
+              'message'=> [
+                  'title' => [
+                      'type' => 'text',
+                      'content' => 'template text',
+                  ],
+                  'buttons' => [
+                      'url' => [
+                          'display' => 'wablas.com',
+                          'link' => 'https://wablas.com',
+                      ],
+                      'call' => [
+                          'display' => 'contact us',
+                          'phone' => '081223644xxx',
+                      ],
+                      'quickReply' => ["reply 1","reply 2"],
+                  ],
+                  'content' => 'sending template message...',
+                  'footer' => 'footer template here',
+              ]
+          ]
+      ];  
+      
+      ```
+              
     
-    vii. Send::list_message($payload);
+   - Send::list_message($payload);
     
-     * Example Format payload
-     
-              $payload = [
-                    [
-                        'phone' => '6285867765107',
-                        'message'=> [
-                            'title' => 'Title Here',
-                            'description' => 'This is template message',
-                            'buttonText' => 'Opsi',
-                            'lists' => [
-                                [
-                                    'title' => 'List 1',
-                                    'description' => 'This is list 1',
-                                ],
-                                [
-                                    'title' => 'List 2',
-                                    'description' => 'This is list 2',
-                                ],
-                            ],
-                            'footer' => 'Footer message here.',
-                        ],
-                    ]
-                ];
-
-    viii. Send::location_message($payload);
+     Example Format payload
+       ```PHP
+       $payload = [
+          [
+              'phone' => '6285867765107',
+              'message'=> [
+                  'title' => 'Title Here',
+                  'description' => 'This is template message',
+                  'buttonText' => 'Opsi',
+                  'lists' => [
+                      [
+                          'title' => 'List 1',
+                          'description' => 'This is list 1',
+                      ],
+                      [
+                          'title' => 'List 2',
+                          'description' => 'This is list 2',
+                      ],
+                  ],
+                  'footer' => 'Footer message here.',
+              ],
+          ]
+      ];
+      
+      ```
+             
+   - location_message($payload);
     
-    * Example payload format
+     Example payload format
 
              $payload = [
                 [
