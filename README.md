@@ -140,9 +140,6 @@ $ WABLAS_SERVER=
   3. Send Multiple Message
 
   - multiple_text($payload);
-
-    Example Format payload :
-    
   ```PHP
     use Silvanix/Wablas/Message;
   
@@ -175,10 +172,7 @@ $ WABLAS_SERVER=
   
   ```
       
-   - multiple_image($data);
-
-     Example Format payload
-
+   - multiple_image($payload);
      ```PHP
      $payload = [
           [
@@ -195,10 +189,7 @@ $ WABLAS_SERVER=
       ];
       ```
   
-   - multiple_audio($data);
-    
-     Example Format payload
-     
+   - multiple_audio($payload);
    ```PHP
       $payload = [
           [
@@ -215,9 +206,7 @@ $ WABLAS_SERVER=
    ```
             
                 
-   - multiple_video($data);
-    
-     Example Format payload
+   - multiple_video($payload);
       ```PHP
       $payload = [
           [
@@ -234,10 +223,7 @@ $ WABLAS_SERVER=
       ];
       ```
                
-   - multiple_document($data);
-    
-      Example Format payload
-      
+   - multiple_document($payload);
       ```PHP
       $payload = [
           [
@@ -255,8 +241,6 @@ $ WABLAS_SERVER=
                 
     
    - template_message($payload);
-    
-     Example Format payload
         ```PHP
        $payload = [
           [
@@ -286,9 +270,7 @@ $ WABLAS_SERVER=
       ```
               
     
-   - Send::list_message($payload);
-    
-     Example Format payload
+   - list_message($payload);
        ```PHP
        $payload = [
           [
@@ -316,8 +298,6 @@ $ WABLAS_SERVER=
              
    - location_message($payload);
     
-     Example payload format
-
              $payload = [
                 [
                     'phone' => '6285867765107',
