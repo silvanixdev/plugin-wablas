@@ -57,9 +57,7 @@ iii. disconnect();
 
 Example :
 ```PHP
-    ...
     use Silvanix/Wablas/Device;
-    ...
     
     $device = new Device();
     
