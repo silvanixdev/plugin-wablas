@@ -120,12 +120,24 @@ $ WABLAS_SERVER=
   
   ```
 
-## Resend Message
+  2. Resend Message
 
-    Send::again($id);
+      - again($id);
+      
+  Example :
+  
+  ```PHP
+  use Silvanix/Wablas/Message;
 
+  $send = new Message();
+  
+  $id ='lkasjndl-k8792173kjsaas';
+  
+  $resend = $send->again($id);
+  
+  ```
 
-5. Send Multiple Message
+  3. Send Multiple Message
 
     i. Send::multiple_text($payload);
     
