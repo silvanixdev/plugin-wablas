@@ -139,11 +139,15 @@ $ WABLAS_SERVER=
 
   3. Send Multiple Message
 
-    i. Send::multiple_text($payload);
+      - Send::multiple_text($payload);
     
-    * Example Format payload
+  Example Format payload :
     
-            $payload = [
+  ```PHP
+  use Silvanix/Wablas/Message;
+  
+  $send = new Message();
+   $payload = [
                 [
                     'phone' => '6281229889541',
                     'message' => 'Test Pesan 1',
@@ -166,6 +170,12 @@ $ WABLAS_SERVER=
                     'source' => 'group personal'
                 ],
             ];
+  $id ='lkasjndl-k8792173kjsaas';
+  
+  $resend = $send->again($id);
+  
+  ```
+           
             
             
     ii. Send::multiple_image($data);
