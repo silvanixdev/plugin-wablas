@@ -55,6 +55,20 @@ ii. restart();
 
 iii. disconnect();
 
+Example :
+```
+    ...
+    use Silvanix/Wablas/Device;
+    ...
+    
+    $device = new Device();
+    
+    $info = $device->info();
+    $restart = $device->restart();
+    $disconnect = $device->disconnect();
+
+```
+
 2. Check Phone
 
     use this to check Whatsapp Number is active or not
