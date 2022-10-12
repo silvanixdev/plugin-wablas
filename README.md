@@ -236,7 +236,8 @@ $ WABLAS_SERVER=
                
    - Send::multiple_document($data);
     
-   Example Format payload
+      Example Format payload
+      
       ```PHP
       $payload = [
           [
@@ -249,6 +250,7 @@ $ WABLAS_SERVER=
               'isGroup' => true,
           ],
       ];
+      
       ```
                 
     
