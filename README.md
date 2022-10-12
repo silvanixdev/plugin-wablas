@@ -65,22 +65,22 @@ $ WABLAS_SERVER=
   $restart = $device->restart();
   $disconnect = $device->disconnect();
   ```
-> Phone
+> Check
 
   use this to check Whatsapp Number is active or not
 
-  1. check($phones);
+  1. phone($phones);
 
   - you can use multiple phone separated by comma(,)
 
    Example :
   ```PHP
-  use Silvanix/Wablas/Phone;
+  use Silvanix/Wablas/Check;
 
-  $phone = new Phone();
+  $check = new Check();
 
   $phones ='08121211111,089888888,07812121212';
-  $check = $phone->check($phones);
+  $is_active = $check->phone($phones);
 
   ```
 3. Send Single Message
