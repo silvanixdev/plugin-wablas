@@ -5,11 +5,13 @@ namespace Silvanix\Wablas;
 use Illuminate\Support\Facades\Http;
 use Silvanix\Wablas\Server;
 
-class Send
+class Message
 {
-    public static function single_text($phone, $message)
+    use Server;
+
+    public function single_text($phone, $message)
     {
-        $url = Server::api().'send-message';
+        $url = self::api().'send-message';
         $data = [
             'phone' => $phone,
             'message' => $message,
@@ -17,16 +19,16 @@ class Send
         ];
         $response = Http::withHeaders([
             'Content-Type' => 'application/json',
-            'Authorization'=> Server::token()
+            'Authorization'=> self::token()
         ])->post($url,$data);
         $json_data = $response->json();
 
         return $json_data;
     }
 
-    public static function single_image(string $phone,$image,$caption=null)
+    public function single_image(string $phone,$image,$caption=null)
     {
-        $url = Server::api().'send-image';
+        $url = self::api().'send-image';
         $data = [
             'phone' => $phone,
             'image' => $image,
@@ -35,16 +37,16 @@ class Send
         ];
         $response = Http::withHeaders([
             'Content-Type' => 'application/json',
-            'Authorization'=> Server::token()
+            'Authorization'=> self::token()
         ])->post($url,$data);
         $json_data = $response->json();
 
         return $json_data;
     }
 
-    public static function single_audio(string $phone, $audio_url)
+    public function single_audio(string $phone, $audio_url)
     {
-        $url = Server::api().'send-audio';
+        $url = self::api().'send-audio';
         $data = [
             'phone' => $phone,
             'audio' => $audio_url,
@@ -52,16 +54,16 @@ class Send
         ];
         $response = Http::withHeaders([
             'Content-Type' => 'application/json',
-            'Authorization'=> Server::token()
+            'Authorization'=> self::token()
         ])->post($url,$data);
         $json_data = $response->json();
 
         return $json_data;
     }
 
-    public static function single_video(string $phone,$video_url,$caption= null)
+    public function single_video(string $phone,$video_url,$caption= null)
     {
-        $url = Server::api().'send-video';
+        $url = self::api().'send-video';
         $data = [
             'phone' => $phone,
             'video' => $video_url,
@@ -70,16 +72,16 @@ class Send
         ];
         $response = Http::withHeaders([
             'Content-Type' => 'application/json',
-            'Authorization'=> Server::token()
+            'Authorization'=> self::token()
         ])->post($url,$data);
         $json_data = $response->json();
 
         return $json_data;
     }
 
-    public static function single_document(string $phone,$document_url)
+    public function single_document(string $phone,$document_url)
     {
-        $url = Server::api().'send-document';
+        $url = self::api().'send-document';
         $data = [
             'phone' => $phone,
             'document' => $document_url,
@@ -87,91 +89,91 @@ class Send
         ];
         $response = Http::withHeaders([
             'Content-Type' => 'application/json',
-            'Authorization'=> Server::token()
+            'Authorization'=> self::token()
         ])->post($url,$data);
         $json_data = $response->json();
 
         return $json_data;
     }
 
-    public static function again($id)
+    public function again($id)
     {
-        $url = Server::api()."resend-message?id=$id";
+        $url = self::api()."resend-message?id=$id";
         $response = Http::withHeaders([
             'Content-Type' => 'application/json',
-            'Authorization'=> Server::token()
+            'Authorization'=> self::token()
         ])->get($url);
         $json_data = $response->json();
 
         return $json_data;
     }
 
-    public static function multiple_text($data)
+    public function multiple_text($data)
     {
         $payload = [ 'data'=> $data];
-        $url = Server::api().'v2/send-message';
+        $url = self::api().'v2/send-message';
         $response = Http::withHeaders([
             'Content-Type' => 'application/json',
-            'Authorization'=> Server::token()
+            'Authorization'=> self::token()
         ])->post($url,$payload);
         $json_data = $response->json();
 
         return $json_data;
     }
 
-    public static function multiple_image($data)
+    public function multiple_image($data)
     {
         $payload = [ 'data'=> $data];
-        $url = Server::api().'v2/send-image';
+        $url = self::api().'v2/send-image';
         $response = Http::withHeaders([
             'Content-Type' => 'application/json',
-            'Authorization'=> Server::token()
+            'Authorization'=> self::token()
         ])->post($url,$payload);
         $json_data = $response->json();
 
         return $json_data;
     }
 
-    public static function multiple_video($data)
+    public function multiple_video($data)
     {
         $payload = [ 'data'=> $data];
-        $url = Server::api().'v2/send-video';
+        $url = self::api().'v2/send-video';
         $response = Http::withHeaders([
             'Content-Type' => 'application/json',
-            'Authorization'=> Server::token()
+            'Authorization'=> self::token()
         ])->post($url,$payload);
         $json_data = $response->json();
 
         return $json_data;
     }
 
-    public static function multiple_audio($data)
+    public function multiple_audio($data)
     {
         $payload = [ 'data'=> $data];
-        $url = Server::api().'v2/send-audio';
+        $url = self::api().'v2/send-audio';
         $response = Http::withHeaders([
             'Content-Type' => 'application/json',
-            'Authorization'=> Server::token()
+            'Authorization'=> self::token()
         ])->post($url,$payload);
         $json_data = $response->json();
 
         return $json_data;
     }
 
-    public static function multiple_document($data)
+    public function multiple_document($data)
     {
         $payload = [ 'data'=> $data];
-        $url = Server::api().'v2/send-document';
+        $url = self::api().'v2/send-document';
         $response = Http::withHeaders([
             'Content-Type' => 'application/json',
-            'Authorization'=> Server::token()
+            'Authorization'=> self::token()
         ])->post($url,$payload);
         $json_data = $response->json();
 
         return $json_data;
     }
 
-    public static function footer_message($phone,$message,$footer,$header=null)
+    public function footer_message($phone,$message,$footer,$header=null)
     {
         $payload = [
             "data" => [
@@ -188,71 +190,71 @@ class Send
                 ]
             ]
         ];
-        $url = Server::api().'v2/send-template';
+        $url = self::api().'v2/send-template';
         $response = Http::withHeaders([
             'Content-Type' => 'application/json',
-            'Authorization'=> Server::token()
+            'Authorization'=> self::token()
         ])->post($url,$payload);
         $json_data = $response->json();
 
         return $json_data;
     }
 
-    public static function template_message($data)
+    public function template_message($data)
     {
         $payload = [ 'data'=> $data];
-        $url = Server::api().'v2/send-template';
+        $url = self::api().'v2/send-template';
         $response = Http::withHeaders([
             'Content-Type' => 'application/json',
-            'Authorization'=> Server::token()
+            'Authorization'=> self::token()
         ])->post($url,$payload);
         $json_data = $response->json();
 
         return $json_data;
     }
 
-    public static function list_message($data)
+    public function list_message($data)
     {
         $payload = [ 'data'=> $data];
-        $url = Server::api().'v2/send-list';
+        $url = self::api().'v2/send-list';
         $response = Http::withHeaders([
             'Content-Type' => 'application/json',
-            'Authorization'=> Server::token()
+            'Authorization'=> self::token()
         ])->post($url,$payload);
         $json_data = $response->json();
 
         return $json_data;
     }
 
-    public static function location_message($data)
+    public function location_message($data)
     {
         $payload = [ 'data'=> $data];
-        $url = Server::api().'v2/send-location';
+        $url = self::api().'v2/send-location';
         $response = Http::withHeaders([
             'Content-Type' => 'application/json',
-            'Authorization'=> Server::token()
+            'Authorization'=> self::token()
         ])->post($url,$payload);
         $json_data = $response->json();
 
         return $json_data;
     }
 
-    public static function button_message($data)
+    public function button_message($data)
     {
         $payload = [ 'data'=> $data];
-        $url = Server::api().'v2/send-button';
+        $url = self::api().'v2/send-button';
         $response = Http::withHeaders([
             'Content-Type' => 'application/json',
-            'Authorization'=> Server::token()
+            'Authorization'=> self::token()
         ])->post($url,$payload);
         $json_data = $response->json();
 
         return $json_data;
     }
 
-    public static function local_document($file,$phone)
+    public function local_document($file,$phone)
     {
-        $url = Server::api().'send-document-from-local';
+        $url = self::api().'send-document-from-local';
         $filename = $file->getPathName();
         $handle = fopen($filename,"r");
         $data = fread($handle,filesize($filename));
@@ -268,14 +270,14 @@ class Send
         ];
         $response = Http::withHeaders([
             'Content-Type' => 'application/json',
-            'Authorization'=> Server::token()
+            'Authorization'=> self::token()
         ])->post($url,$payload);
         $json_data = $response->json();
 
         return $json_data;
     }
 
-    public static function local_file($file,$phone,$caption=null)
+    public function local_file($file,$phone,$caption=null)
     {
         $type = File::check_ext($file);
 
@@ -284,8 +286,8 @@ class Send
             return 'invalid file';
         }
 
-        $url = Server::api()."send-$type-from-local";
-        $token = Server::token();
+        $url = self::api()."send-$type-from-local";
+        $token = self::token();
         $rawData = $file->getPathName();
         $mime = $file->getMimeType();
         $name = $file->getClientOriginalName();
@@ -309,6 +311,42 @@ class Send
         $json = json_decode($result);
 
         return $json;
+    }
+
+    public function cancel($id)
+    {
+        $url = self::api()."cancel-message?id=$id";
+        $response = Http::withHeaders([
+            'Content-Type' => 'application/json',
+            'Authorization'=> self::token()
+        ])->get($url);
+        $json_data = $response->json();
+
+        return $json_data;
+    }
+
+    public function cancel_all()
+    {
+        $url = self::api().'cancel-all-message';
+        $response = Http::withHeaders([
+            'Content-Type' => 'application/json',
+            'Authorization'=> self::token()
+        ])->get($url);
+        $json_data = $response->json();
+
+        return $json_data;
+    }
+
+    public function revoke($id)
+    {
+        $url = self::api()."revoke-message?id=$id";
+        $response = Http::withHeaders([
+            'Content-Type' => 'application/json',
+            'Authorization'=> self::token()
+        ])->get($url);
+        $json_data = $response->json();
+
+        return $json_data;
     }
 
 }

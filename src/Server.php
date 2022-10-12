@@ -2,25 +2,31 @@
 
 namespace Silvanix\Wablas;
 
-class Server
+trait Server
 {
-    public static function api()
+    protected $server;
+    protected $token;
+
+    function __construct()
     {
-        $server = env('WABLAS_SERVER');
-        $url = "https://$server.wablas.com/api/";
+        $this->server = env('WABLAS_SERVER');
+        $this->token =  env('WABLAS_TOKEN');
+    }
+
+    public function api()
+    {
+        $url = "https://$this->server.wablas.com/api/";
         return $url;
     }
 
-    public static function token()
+    public function token()
     {
-        return env('WABLAS_TOKEN');
+        return $this->token;
     }
 
-    public static function host()
+    public function host()
     {
-        $server = env('WABLAS_SERVER');
-        $url = "https://$server.wablas.com";
-
+        $url = "https://$this->server.wablas.com";
         return $url;
     }
 }
