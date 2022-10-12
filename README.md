@@ -97,34 +97,35 @@ $ WABLAS_SERVER=
   4. single_video($phone,$video_url,$caption);
 
   5. single_document($phone,$document_url);
+ 
+  6. footer_message($phone,$message,$footer,$header);
 
   note : 
 
   - $caption is optional
 
   - you can use multiple phone separated by comma(,)
-    
+   
+  - header is optional
+  
   Example :
   
   ```PHP
   use Silvanix/Wablas/Message;
 
-  $message = new Message();
+  $send = new Message();
   
   $phones = '0811111,082222222,089888888';
   $message = 'hello';
   $image = 'https://i.imgur.com/OB0y6MR.jpg';
   
-  $send_text = $message->single_text($phones,$message);
-  $send_image =  $message->single_image($phones,$image,$message);
- 
-  
+  $send_text = $send->single_text($phones,$message);
+  $send_image =  $send->single_image($phones,$image,$message);
   ```
   
   
-  6. Send::footer_message($phone,$message,$footer,$header);
     
-    * header is optional
+    *
 
 4. Resend Message
 
