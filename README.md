@@ -144,6 +144,7 @@ $ WABLAS_SERVER=
     use Silvanix/Wablas/Message;
   
     $send = new Message();
+    
     $payload = [
       [
           'phone' => '6281229889541',
@@ -167,7 +168,6 @@ $ WABLAS_SERVER=
           'source' => 'group personal'
       ],
    ];
-   
   $send_text = $send->multiple_text($payload);
   
   ```
@@ -175,40 +175,42 @@ $ WABLAS_SERVER=
       
    - multiple_image($data);
    
-     Example Format payload
+     Example Format payload "
     
-        
     ```PHP
-     $payload = [
-                    [
-                        'phone' => '6281229889541',
-                        'image' => 'https://cdn-asset.jawapos.com/wp-content/uploads/2019/01/keluarga-pawang-di-jepang-maafkan-macan-putih-yang-membunuhnya_m_.jpg',
-                        'caption' => 'caption here',
-                    ],
-                    [
-                        'phone' => '6287817274185-1632192971',
-                        'image' => 'https://farm4.staticflickr.com/3075/3168662394_7d7103de7d_z_d.jpg',
-                        'caption' => 'Image to group',
-                        'isGroup' => true,
-                    ],
-                ];```
+      $payload = [
+          [
+              'phone' => '6281229889541',
+              'image' => 'https://cdn-asset.jawapos.com/wp-content/uploads/2019/01/keluarga-pawang-di-jepang-maafkan-macan-putih-yang-membunuhnya_m_.jpg',
+              'caption' => 'caption here',
+          ],
+          [
+              'phone' => '6287817274185-1632192971',
+              'image' => 'https://farm4.staticflickr.com/3075/3168662394_7d7103de7d_z_d.jpg',
+              'caption' => 'Image to group',
+              'isGroup' => true,
+          ],
+      ];
+     ```
         
-    iii. Send::multiple_audio($data);
+   - Send::multiple_audio($data);
     
-    * Example Format payload
-   
-               $payload = [
-                    [
-                        'phone' => '6281229889541',
-                        'audio' => 'https://prof3ssorst3v3.github.io/media-sample-files/jimmy-coffee.mp3',
-                        'caption' => 'caption here',
-                    ],
-                    [
-                        'phone' => '6287817274185-1632192971',
-                        'audio' => 'https://prof3ssorst3v3.github.io/media-sample-files/jimmy-coffee.mp3',
-                        'isGroup' => true,
-                    ],
-                ];
+     Example Format payload
+   ```PHP
+      $payload = [
+          [
+              'phone' => '6281229889541',
+              'audio' => 'https://prof3ssorst3v3.github.io/media-sample-files/jimmy-coffee.mp3',
+              'caption' => 'caption here',
+          ],
+          [
+              'phone' => '6287817274185-1632192971',
+              'audio' => 'https://prof3ssorst3v3.github.io/media-sample-files/jimmy-coffee.mp3',
+              'isGroup' => true,
+          ],
+      ];
+   ```
+            
                 
     iv. Send::multiple_video($data);
     
