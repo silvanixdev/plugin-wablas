@@ -65,6 +65,7 @@ $ WABLAS_SERVER=
   $restart = $device->restart();
   $disconnect = $device->disconnect();
   ```
+  
 > Check
 
   use this to check Whatsapp Number is active or not
@@ -83,40 +84,40 @@ $ WABLAS_SERVER=
   $is_active = $check->phone($phones);
 
   ```
-3. Send Single Message
+  
+> Message
     
-    i. Send::single_text($phone,$message);
+  1. single_text($phone,$message);
 
-    ii. Send::single_image($phone,$image_url,$caption);
+  2. single_image($phone,$image_url,$caption);
 
-    iii. Send::single_audio($phone,$audio_url);
+  3. single_audio($phone,$audio_url);
 
-    iv. Send::single_video($phone,$video_url,$caption);
+  4. single_video($phone,$video_url,$caption);
 
-    v. Send::single_document($phone,$document_url);
+  5. single_document($phone,$document_url);
 
-    note : 
+  note : 
+
+  - $caption is optional
+
+  - you can use multiple phone separated by comma(,)
     
-      - $caption is optional
-    
-      - you can use multiple phone separated by comma(,)
-    
-    Example :
-    
-        <?php
-        ....
-        
-        use Silvanix/Wablas/Send;
-        
-        ....
-        
-        $phone = '6281393961320,62812611212,62845167552';
+  Example :
+  
+    ```PHP
+    use Silvanix/Wablas/Message;
 
-        $message = 'hello';
+    $phone = '6281393961320,62812611212,62845167552';
 
-        Send::single_text($phone,$message);
+    $message = 'hello';
 
-    vi. Send::footer_message($phone,$message,$footer,$header);
+    Send::single_text($phone,$message);
+    
+  ```
+  
+  
+  6. Send::footer_message($phone,$message,$footer,$header);
     
     * header is optional
 
