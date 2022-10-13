@@ -453,9 +453,8 @@ $ WABLAS_SERVER=
         ```
            
     - Multiple Category 
-       
-            ```PHP
-          $payload = [
+          ```PHP
+     $payload = [
                 [
                     'category' => 'image',
                     'phone' => '62812185122343',
@@ -498,7 +497,8 @@ $ WABLAS_SERVER=
                     ],
                 ],
             ];  
-              ```
+  
+        ```
 
     - cancel($id);
     
