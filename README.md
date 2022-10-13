@@ -397,7 +397,9 @@ $ WABLAS_SERVER=
     
     - Controller
     
+    
      ```PHP
+     
       use Silvanix\Wablas\Message;
       
       public function store(Request $request)
@@ -414,14 +416,15 @@ $ WABLAS_SERVER=
     - Route
     
       ```PHP
-      ...
-      Route::post('.../store', [App\Http\Controllers\SomeController::class, 'store'])->name('store');
+      
+        Route::post('.../store', [App\Http\Controllers\SomeController::class, 'store'])->name('store');
       
       ```    
       
     - View
     
      ```Html
+
       <form class="needs-validation" novalidate method="post" action="{{ route('store') }}" enctype="multipart/form-data" >
       @csrf
           <input type="text" placeholder="081393961320,0821212122,08128282812"name='phones'>
