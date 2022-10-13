@@ -502,9 +502,20 @@ $ WABLAS_SERVER=
         ```
         
     - cancel($id);
-    
+      
     - delete($id);
-
+      
+      Example :
+         ```PHP
+          use Silvanix\Wablas\Schedule;
+          
+          $shedule = new Schedule
+          
+          $id = 'kajbdiuwe-8723yjhasbds-asdknasd8y
+          $cancel = $schedule->cancel($id);
+          $delete = $schedule->delete($id);
+  
+        ```
  9. Send Local File (Image, Audio, Video)
     
     i. Send::local_file($file,$phones,$caption);
