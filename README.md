@@ -10,6 +10,7 @@ untuk mempermudah dalam melakukan implementasikan fitur-fitur yang dimiliki oleh
 * Disconnect Device
 * Check Phone
 * Send Text Message
+* 
 * Send Media Message (Image, Video, Audio, Document)
 * Send Button Message
 * Send Footer Message
@@ -121,10 +122,26 @@ $ WABLAS_SERVER=
 
   ```
 
-  2. Resend Message
+  2. Resend Message , Cancel & Revoke
 
       - again($id);
       
+        resend canceled message
+        
+       - cancel($id);
+       
+        cancel pending message by ID
+        
+        - cancel_all();
+        
+        cancel all pending messages
+        
+        - revoke($id);
+       
+        cancel pending message by ID
+        
+         - you can use multiple phone separated by comma(,)
+         
         Example :
   
   ```PHP
@@ -132,12 +149,16 @@ $ WABLAS_SERVER=
 
         $send = new Message();
 
-        $id ='lkasjndl-k8792173kjsaas';
-        $resend = $send->again($id);
+        $message_id ='sakdj798-lkasjndl-k8792173kjas';
+        
+        $resend = $send->again($message_id);
+        $cancel = $send->cancel($message_id);
+        $cancel_all = $send->cancel_all();
+        $revoke = $send->revoke($message_id);
   
   ```
 
-  3. Send Multiple Message
+  . Send Multiple Message
 
       - multiple_text($payload);
   ```PHP
