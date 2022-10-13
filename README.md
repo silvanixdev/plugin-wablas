@@ -10,7 +10,6 @@ untuk mempermudah dalam melakukan implementasikan fitur-fitur yang dimiliki oleh
 * Disconnect Device
 * Check Phone
 * Send Text Message
-* 
 * Send Media Message (Image, Video, Audio, Document)
 * Send Button Message
 * Send Footer Message
