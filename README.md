@@ -414,10 +414,9 @@ $ WABLAS_SERVER=
       ```
       
     - Route
-    
       ```PHP
-      
-        Route::post('.../store', [App\Http\Controllers\SomeController::class, 'store'])->name('store');
+      ...
+      Route::post('.../store', [App\Http\Controllers\SomeController::class, 'store'])->name('store');
       
       ```    
       
