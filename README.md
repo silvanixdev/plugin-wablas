@@ -82,7 +82,7 @@ $ WABLAS_SERVER=
       $check = new Check();
 
       $phones ='08121211111,089888888,07812121212';
-      $is_active = $check->phone($phones);
+      $check_phone = $check->phone($phones);
 
   ```
   
