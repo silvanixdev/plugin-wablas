@@ -511,7 +511,7 @@ $ WABLAS_SERVER=
           
           $shedule = new Schedule
           
-          $id = 'kajbdiuwe-8723yjhasbds-asdknasd8y
+          $id = 'kajbdiuwe-8723yjhasbds-asdknasd8y';
           $cancel = $schedule->cancel($id);
           $delete = $schedule->delete($id);
   
