@@ -128,15 +128,15 @@ $ WABLAS_SERVER=
       
         resend canceled message
         
-       - cancel($id);
+      - cancel($id);
        
         cancel pending message by ID
         
-        - cancel_all();
+      - cancel_all();
         
         cancel all pending messages
         
-        - revoke($id);
+      - revoke($id);
        
         cancel pending message by ID
         
