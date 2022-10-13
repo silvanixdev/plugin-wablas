@@ -212,20 +212,20 @@ $ WABLAS_SERVER=
   
    - multiple_audio($payload);
    
-   ```PHP
-        $payload = [
-            [
-                'phone' => '6281229889541',
-                'audio' => 'https://prof3ssorst3v3.github.io/media-sample-files/jimmy-coffee.mp3',
-                'caption' => 'caption here',
-            ],
-            [
-                'phone' => '6287817274185-1632192971',
-                'audio' => 'https://prof3ssorst3v3.github.io/media-sample-files/jimmy-coffee.mp3',
-                'isGroup' => true,
-            ],
-        ];
-   ```
+     ```PHP
+          $payload = [
+              [
+                  'phone' => '6281229889541',
+                  'audio' => 'https://prof3ssorst3v3.github.io/media-sample-files/jimmy-coffee.mp3',
+                  'caption' => 'caption here',
+              ],
+              [
+                  'phone' => '6287817274185-1632192971',
+                  'audio' => 'https://prof3ssorst3v3.github.io/media-sample-files/jimmy-coffee.mp3',
+                  'isGroup' => true,
+              ],
+          ];
+     ```
             
                 
    - multiple_video($payload);
@@ -398,7 +398,6 @@ $ WABLAS_SERVER=
     - Controller
     
      ```PHP
-     
       use Silvanix\Wablas\Message;
       
       public function store(Request $request)
@@ -409,7 +408,6 @@ $ WABLAS_SERVER=
           $test = $send->local_document($file,$phones);
           echo $test;
       }
-      
       ```
       
     - Route
@@ -439,7 +437,7 @@ $ WABLAS_SERVER=
         -Simple Text Message
         
           ```PHP
-          use Silvanix\Wablas\Schedule;
+           use Silvanix\Wablas\Schedule;
            
           $payload = [
               [
@@ -452,10 +450,9 @@ $ WABLAS_SERVER=
           
           $shedule = new Schedule();
           $create = $schedule->new_message($payload);
-          
-            ```
+          ```
            
-       -Multiple Category 
+      -Multiple Category 
        
             ```PHP
           $payload = [
