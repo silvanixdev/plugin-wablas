@@ -396,6 +396,7 @@ $ WABLAS_SERVER=
     Example :
     
     - Controller
+    
      ```PHP
       use Silvanix\Wablas\Message;
       
@@ -407,14 +408,19 @@ $ WABLAS_SERVER=
           $test = $send->local_document($file,$phones);
           echo $test;
       }
+      
       ```
+      
     - Route
+    
       ```PHP
       ...
       Route::post('.../store', [App\Http\Controllers\SomeController::class, 'store'])->name('store');
       
       ```    
+      
     - View
+    
      ```Html
       <form class="needs-validation" novalidate method="post" action="{{ route('store') }}" enctype="multipart/form-data" >
       @csrf
