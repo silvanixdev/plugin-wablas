@@ -358,7 +358,7 @@ $ WABLAS_SERVER=
         
 4. File Upload
 
-    - File::local_upload($file);
+    - local_upload($file);
     
     Example :
     
@@ -368,7 +368,8 @@ $ WABLAS_SERVER=
       public function store(Request $request)
       {
           $file = $request->file('file');
-          $url = File::local_upload($file);
+          $send = new File();
+          $url = $send->local_upload($file);
           echo $url;
       }
       ```
