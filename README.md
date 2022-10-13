@@ -509,7 +509,7 @@ $ WABLAS_SERVER=
          ```PHP
           use Silvanix\Wablas\Schedule;
           
-          $shedule = new Schedule
+          $shedule = new Schedule();
           
           $id = 'kajbdiuwe-8723yjhasbds-asdknasd8y';
           $cancel = $schedule->cancel($id);
