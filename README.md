@@ -363,6 +363,7 @@ $ WABLAS_SERVER=
     Example :
     
     - Controller
+    
     ```PHP
         use Silvanix\Wablas\File;
         public function store(Request $request)
@@ -434,24 +435,31 @@ $ WABLAS_SERVER=
             
  8. Schedule Message
  
-    i. Schedule::new_message($payload);
-    
-    * Example payload
+    - new_message($payload);
     
         -Simple Text Message
         
-            $payload = [
-                [
-                    'category' => 'text',
-                    'phone' => '6285867765107',
-                    'scheduled_at' => '2022-09-22 09:46:30',
-                    'text' => 'Hallo kakak',
-                ]
-            ];
-            
-        -Multiple Category Message
-        
-            $payload = [
+          ```PHP
+          use Silvanix\Wablas\Schedule;
+           
+          $payload = [
+              [
+                  'category' => 'text',
+                  'phone' => '6285867765107',
+                  'scheduled_at' => '2022-09-22 09:46:30',
+                  'text' => 'Hallo kakak',
+              ]
+          ];
+          
+          $shedule = new Schedule();
+          $create = $schedule->new_message($payload);
+          
+            ```
+           
+       -Multiple Category 
+       
+            ```PHP
+          $payload = [
                 [
                     'category' => 'image',
                     'phone' => '62812185122343',
@@ -466,7 +474,7 @@ $ WABLAS_SERVER=
                     'text' => [
                         'title' => [
                             'type' => 'image',
-                            'content' => 'https://cdn-asset.jawapos.com/wp-content/uploads/2019/01/keluarga-pawang-di-jepang-maafkan-macan-putih-yang-membunuhnya_m_.jpg',
+                            'content' => 'https://farm4.staticflickr.com/3075/3168662394_7d7103de7d_z_d.jpg',
                         ],
                         'buttons' => [
                             'url' => [
@@ -495,9 +503,11 @@ $ WABLAS_SERVER=
                 ],
             ];  
 
-    ii. Schedule::cancel($id);
+              ```
+           
+    - cancel($id);
     
-    iii. Schedule::delete($id);
+    - delete($id);
 
  9. Send Local File (Image, Audio, Video)
     
