@@ -58,13 +58,13 @@ $ WABLAS_SERVER=
 
   Example :
   ```PHP
-      use Silvanix/Wablas/Device;
+        use Silvanix/Wablas/Device;
 
-      $device = new Device();
+        $device = new Device();
 
-      $info = $device->info();
-      $restart = $device->restart();
-      $disconnect = $device->disconnect();
+        $info = $device->info();
+        $restart = $device->restart();
+        $disconnect = $device->disconnect();
   ```
   
 ## Check
@@ -77,12 +77,12 @@ $ WABLAS_SERVER=
 
         Example :
   ```PHP
-      use Silvanix/Wablas/Check;
+        use Silvanix/Wablas/Check;
 
-      $check = new Check();
+        $check = new Check();
 
-      $phones ='08121211111,089888888,07812121212';
-      $check_phone = $check->phone($phones);
+        $phones ='08121211111,089888888,07812121212';
+        $check_phone = $check->phone($phones);
 
   ```
   
@@ -108,17 +108,17 @@ $ WABLAS_SERVER=
         Example :
 
    ```PHP
-      use Silvanix/Wablas/Message;
+        use Silvanix/Wablas/Message;
 
-      $send = new Message();
+        $send = new Message();
 
-      $phones ='08121211111,089888888,07812121212';
-      $message = 'hello';
-      $image = 'https://i.imgur.com/OB0y6MR.jpg';
+        $phones ='08121211111,089888888,07812121212';
+        $message = 'hello';
+        $image = 'https://i.imgur.com/OB0y6MR.jpg';
 
-      $send_text = $send->single_text($phones,$message);
-      $send_image =  $send->single_image($phones,$image,$message);
-  
+        $send_text = $send->single_text($phones,$message);
+        $send_image =  $send->single_image($phones,$image,$message);
+
   ```
 
   2. Resend Message
@@ -128,241 +128,244 @@ $ WABLAS_SERVER=
         Example :
   
   ```PHP
-      use Silvanix/Wablas/Message;
+        use Silvanix/Wablas/Message;
 
-      $send = new Message();
+        $send = new Message();
 
-      $id ='lkasjndl-k8792173kjsaas';
-      $resend = $send->again($id);
+        $id ='lkasjndl-k8792173kjsaas';
+        $resend = $send->again($id);
   
   ```
 
   3. Send Multiple Message
 
-  - multiple_text($payload);
+      - multiple_text($payload);
   ```PHP
-      use Silvanix/Wablas/Message;
+        use Silvanix/Wablas/Message;
 
-      $send = new Message();
+        $send = new Message();
 
-      $payload = [
-        [
-            'phone' => '6281229889541',
-            'message' => 'Test Pesan 1',
-        ],
-        [
-            'phone' => '6281229889541',
-            'message' => 'Hello {name} Pesan with spintax',
-            'spintax' => true,
-            'source' => 'for personal'
-        ],
-        [
-            'phone' => '6285867765107',
-            'message' => 'Hello Pesan 3',
-            'secret' => true,
-        ],
-        [
-            'phone' => '6287817274185-1632192971',
-            'message' => 'Test Group',
-            'isGroup' => true,
-            'source' => 'group personal'
-        ],
-     ];
-    $send_text = $send->multiple_text($payload);
+        $payload = [
+          [
+              'phone' => '6281229889541',
+              'message' => 'Test Pesan 1',
+          ],
+          [
+              'phone' => '6281229889541',
+              'message' => 'Hello {name} Pesan with spintax',
+              'spintax' => true,
+              'source' => 'for personal'
+          ],
+          [
+              'phone' => '6285867765107',
+              'message' => 'Hello Pesan 3',
+              'secret' => true,
+          ],
+          [
+              'phone' => '6287817274185-1632192971',
+              'message' => 'Test Group',
+              'isGroup' => true,
+              'source' => 'group personal'
+          ],
+       ];
+      $send_text = $send->multiple_text($payload);
   
   ```
       
    - multiple_image($payload);
-     ```PHP
-     $payload = [
-          [
-              'phone' => '6281229889541',
-              'image' => 'https://cdn-asset.jawapos.com/wp-content/uploads/2019/01/keluarga-pawang-di-jepang-maafkan-macan-putih-yang-membunuhnya_m_.jpg',
-              'caption' => 'caption here',
-          ],
-          [
-              'phone' => '6287817274185-1632192971',
-              'image' => 'https://farm4.staticflickr.com/3075/3168662394_7d7103de7d_z_d.jpg',
-              'caption' => 'Image to group',
-              'isGroup' => true,
-          ],
-      ];
-      ```
+    
+  ```PHP
+       $payload = [
+            [
+                'phone' => '6281229889541',
+                'image' => 'https://cdn-asset.jawapos.com/wp-content/uploads/2019/01/keluarga-pawang-di-jepang-maafkan-macan-putih-yang-membunuhnya_m_.jpg',
+                'caption' => 'caption here',
+            ],
+            [
+                'phone' => '6287817274185-1632192971',
+                'image' => 'https://farm4.staticflickr.com/3075/3168662394_7d7103de7d_z_d.jpg',
+                'caption' => 'Image to group',
+                'isGroup' => true,
+            ],
+        ];
+   ```
   
    - multiple_audio($payload);
+   
    ```PHP
-      $payload = [
-          [
-              'phone' => '6281229889541',
-              'audio' => 'https://prof3ssorst3v3.github.io/media-sample-files/jimmy-coffee.mp3',
-              'caption' => 'caption here',
-          ],
-          [
-              'phone' => '6287817274185-1632192971',
-              'audio' => 'https://prof3ssorst3v3.github.io/media-sample-files/jimmy-coffee.mp3',
-              'isGroup' => true,
-          ],
-      ];
+        $payload = [
+            [
+                'phone' => '6281229889541',
+                'audio' => 'https://prof3ssorst3v3.github.io/media-sample-files/jimmy-coffee.mp3',
+                'caption' => 'caption here',
+            ],
+            [
+                'phone' => '6287817274185-1632192971',
+                'audio' => 'https://prof3ssorst3v3.github.io/media-sample-files/jimmy-coffee.mp3',
+                'isGroup' => true,
+            ],
+        ];
    ```
             
                 
    - multiple_video($payload);
+   
       ```PHP
-      $payload = [
-          [
-              'phone' => '6281229889541',
-              'video' => 'https://prof3ssorst3v3.github.io/media-sample-files/lion-sample.mp4',
-              'caption' => 'this caption optional',
-          ],
-          [
-              'phone' => '6287817274185-1632192971',
-              'video' => 'https://prof3ssorst3v3.github.io/media-sample-files/lion-sample.mp4',
-               'caption' => 'Image to group',
-              'isGroup' => true,
-          ],
-      ];
+        $payload = [
+            [
+                'phone' => '6281229889541',
+                'video' => 'https://prof3ssorst3v3.github.io/media-sample-files/lion-sample.mp4',
+                'caption' => 'this caption optional',
+            ],
+            [
+                'phone' => '6287817274185-1632192971',
+                'video' => 'https://prof3ssorst3v3.github.io/media-sample-files/lion-sample.mp4',
+                 'caption' => 'Image to group',
+                'isGroup' => true,
+            ],
+        ];
       ```
                
    - multiple_document($payload);
+   
       ```PHP
-      $payload = [
-          [
-              'phone' => '6281229889541',
-              'document' => 'https://africau.edu/images/default/sample.pdf',
-          ],
-          [
-              'phone' => '6287817274185-1632192971',
-              'document' => 'https://africau.edu/images/default/sample.pdf',
-              'isGroup' => true,
-          ],
+        $payload = [
+            [
+                'phone' => '6281229889541',
+                'document' => 'https://africau.edu/images/default/sample.pdf',
+            ],
+            [
+                'phone' => '6287817274185-1632192971',
+                'document' => 'https://africau.edu/images/default/sample.pdf',
+                'isGroup' => true,
+            ],
       ];
       
       ```
                 
     
    - template_message($payload);
+   
         ```PHP
-       $payload = [
-          [
-             'phone' => '6285867765107',
-              'message'=> [
-                  'title' => [
-                      'type' => 'text',
-                      'content' => 'template text',
-                  ],
-                  'buttons' => [
-                      'url' => [
-                          'display' => 'wablas.com',
-                          'link' => 'https://wablas.com',
-                      ],
-                      'call' => [
-                          'display' => 'contact us',
-                          'phone' => '081223644xxx',
-                      ],
-                      'quickReply' => ["reply 1","reply 2"],
-                  ],
-                  'content' => 'sending template message...',
-                  'footer' => 'footer template here',
-              ]
-          ]
-      ];  
+         $payload = [
+            [
+               'phone' => '6285867765107',
+                'message'=> [
+                    'title' => [
+                        'type' => 'text',
+                        'content' => 'template text',
+                    ],
+                    'buttons' => [
+                        'url' => [
+                            'display' => 'wablas.com',
+                            'link' => 'https://wablas.com',
+                        ],
+                        'call' => [
+                            'display' => 'contact us',
+                            'phone' => '081223644xxx',
+                        ],
+                        'quickReply' => ["reply 1","reply 2"],
+                    ],
+                    'content' => 'sending template message...',
+                    'footer' => 'footer template here',
+                ]
+            ]
+        ];  
       
       ```
               
     
    - list_message($payload);
+   
        ```PHP
-       $payload = [
-          [
-              'phone' => '6285867765107',
-              'message'=> [
-                  'title' => 'Title Here',
-                  'description' => 'This is template message',
-                  'buttonText' => 'Opsi',
-                  'lists' => [
-                      [
-                          'title' => 'List 1',
-                          'description' => 'This is list 1',
-                      ],
-                      [
-                          'title' => 'List 2',
-                          'description' => 'This is list 2',
-                      ],
-                  ],
-                  'footer' => 'Footer message here.',
-              ],
-          ]
-      ];
+         $payload = [
+            [
+                'phone' => '6285867765107',
+                'message'=> [
+                    'title' => 'Title Here',
+                    'description' => 'This is template message',
+                    'buttonText' => 'Opsi',
+                    'lists' => [
+                        [
+                            'title' => 'List 1',
+                            'description' => 'This is list 1',
+                        ],
+                        [
+                            'title' => 'List 2',
+                            'description' => 'This is list 2',
+                        ],
+                    ],
+                    'footer' => 'Footer message here.',
+                ],
+            ]
+        ];
       
       ```
              
    - location_message($payload);
     
-             $payload = [
-                [
-                    'phone' => '6285867765107',
-                    'message' => [
-                        'name' => 'place name',
-                        'address' => 'street name',
-                        'latitude' => 24.121231,
-                        'longitude' => 55.1121221,
-                    ],
-                ]
-            ];
+     ```PHP
+        $payload = [
+            [
+                'phone' => '6285867765107',
+                'message' => [
+                    'name' => 'place name',
+                    'address' => 'street name',
+                    'latitude' => 24.121231,
+                    'longitude' => 55.1121221,
+                ],
+            ]
+        ];
+      
+      ```
+            
+   - button_message($payload);
     
-    ix. Send::button_message($payload);
-    
-    * Example payload format
-
-          $payload = [
-                [
-                    'phone' => '6285867765107',
-                    'message' => [
-                        'buttons' => ["Reply 1","Reply 2","Reply 3"],
-                        'content' => 'This is example button message',
-                        'footer' => 'this is footer message',
-                    ],
-                ]
-            ];
+```PHP
+      $payload = [
+          [
+              'phone' => '6285867765107',
+              'message' => [
+                  'buttons' => ["Reply 1","Reply 2","Reply 3"],
+                  'content' => 'This is example button message',
+                  'footer' => 'this is footer message',
+              ],
+          ]
+      ];
+      
+```
         
-6. File Upload
+4. File Upload
 
-    i. File::local_upload($file);
+    - File::local_upload($file);
     
     Example :
     
     - Controller
-    
-                    ...
-
-                    use Silvanix\Wablas\File;
-
-                    ...
-
-                        public function store(Request $request)
-                        {
-                            $file = $request->file('file');
-                            $url = File::local_upload($file);
-                            echo $url;
-                        }
-                        
-    - Route
-                
-                ...
-                
-                Route::post('.../store', [App\Http\Controllers\SomeController::class, 'store'])->name('store');
-                
-                ...
-                                
+    ```PHP
+      use Silvanix\Wablas\File;
+      public function store(Request $request)
+      {
+          $file = $request->file('file');
+          $url = File::local_upload($file);
+          echo $url;
+      }
+      ```
+      - Route 
+      ```PHP
+      ...
+      Route::post('.../store', [App\Http\Controllers\SomeController::class, 'store'])->name('store');
+      
+      ```
     - View
-    
-            ...
-        
-            <form class="needs-validation" novalidate method="post" action="{{ route('store') }}" enctype="multipart/form-data" >
-            @csrf
-                <input type="file" name="file">
-                <button type="submit"> Submit</button>
-            </form>
+      ```PHP
+      <form class="needs-validation" novalidate method="post" action="{{ route('store') }}" enctype="multipart/form-data" >
+       @csrf
+          <input type="file" name="file">
+          <button type="submit"> Submit</button>
+      </form>
+      
+      ```
             
  7. Send Local Document
     
