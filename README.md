@@ -358,7 +358,7 @@ $ WABLAS_SERVER=
       
       ```
     - View
-      ```PHP
+      ```Html
       <form class="needs-validation" novalidate method="post" action="{{ route('store') }}" enctype="multipart/form-data" >
        @csrf
           <input type="file" name="file">
