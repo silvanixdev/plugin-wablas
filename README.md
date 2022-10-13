@@ -368,8 +368,8 @@ $ WABLAS_SERVER=
       public function store(Request $request)
       {
           $file = $request->file('file');
-          $send = new File();
-          $url = $send->local_upload($file);
+          $upload = new File();
+          $url = $upload->local_upload($file);
           echo $url;
       }
       ```
@@ -389,46 +389,41 @@ $ WABLAS_SERVER=
       
       ```
             
- 7. Send Local Document
+ 5. Send Local Document
     
-    i. Send::local_document($file,$phones);
+    - local_document($file,$phones);
     
     Example :
     
     - Controller
-    
-                    ...
-
-                    use Silvanix\Wablas\Send;
-
-                    ...
-
-                        public function store(Request $request)
-                        {
-                            $phones = $request->phones;
-                            $file = $request->file('file');
-                            $test = Send::local_document($file,$phones);
-                            echo $test;
-                        }
-                        
+     ```PHP
+      use Silvanix\Wablas\Message;
+      
+      public function store(Request $request)
+      {
+          $phones = $request->phones;
+          $file = $request->file('file');
+          $send = new Message();
+          $test = $send->local_document($file,$phones);
+          echo $test;
+      }
+      ```
     - Route
-                
-                ...
-                
-                Route::post('.../store', [App\Http\Controllers\SomeController::class, 'store'])->name('store');
-                
-                ...
-                                
+      ```PHP
+      ...
+      Route::post('.../store', [App\Http\Controllers\SomeController::class, 'store'])->name('store');
+      
+      ```    
     - View
-    
-            ...
-        
-            <form class="needs-validation" novalidate method="post" action="{{ route('store') }}" enctype="multipart/form-data" >
-            @csrf
-                <input type="text" placeholder="081393961320,0821212122,08128282812"name='phones'>
-                <input type="file" name="file">
-                <button type="submit"> Submit</button>
-            </form>
+     ```Html
+      <form class="needs-validation" novalidate method="post" action="{{ route('store') }}" enctype="multipart/form-data" >
+      @csrf
+          <input type="text" placeholder="081393961320,0821212122,08128282812"name='phones'>
+          <input type="file" name="file">
+          <button type="submit"> Submit</button>
+      </form>
+
+      ```
             
  8. Schedule Message
  
