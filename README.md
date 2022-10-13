@@ -434,10 +434,9 @@ $ WABLAS_SERVER=
  
     - new_message($payload);
     
-        -Simple Text Message
-        
-          ```PHP
-           use Silvanix\Wablas\Schedule;
+      Example :
+        ```PHP
+      use Silvanix\Wablas\Schedule;
            
           $payload = [
               [
@@ -450,7 +449,8 @@ $ WABLAS_SERVER=
           
           $shedule = new Schedule();
           $create = $schedule->new_message($payload);
-          ```
+  
+  ```
            
       -Multiple Category 
        
