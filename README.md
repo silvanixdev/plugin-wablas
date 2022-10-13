@@ -450,9 +450,9 @@ $ WABLAS_SERVER=
           $shedule = new Schedule();
           $create = $schedule->new_message($payload);
   
-  ```
+        ```
            
-      -Multiple Category 
+    - Multiple Category 
        
             ```PHP
           $payload = [
