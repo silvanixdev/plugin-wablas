@@ -454,7 +454,7 @@ $ WABLAS_SERVER=
            
     - Multiple Category
     
-    ```PHP
+       ```PHP
         $payload = [
                 [
                     'category' => 'image',
