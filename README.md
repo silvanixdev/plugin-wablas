@@ -364,28 +364,28 @@ $ WABLAS_SERVER=
     
     - Controller
     ```PHP
-      use Silvanix\Wablas\File;
-      public function store(Request $request)
-      {
-          $file = $request->file('file');
-          $upload = new File();
-          $url = $upload->local_upload($file);
-          echo $url;
-      }
+        use Silvanix\Wablas\File;
+        public function store(Request $request)
+        {
+            $file = $request->file('file');
+            $upload = new File();
+            $url = $upload->local_upload($file);
+            echo $url;
+        }
       ```
       - Route 
       ```PHP
       ...
-      Route::post('.../store', [App\Http\Controllers\SomeController::class, 'store'])->name('store');
+        Route::post('.../store', [App\Http\Controllers\SomeController::class, 'store'])->name('store');
       
       ```
     - View
       ```Html
-      <form class="needs-validation" novalidate method="post" action="{{ route('store') }}" enctype="multipart/form-data" >
-       @csrf
-          <input type="file" name="file">
-          <button type="submit"> Submit</button>
-      </form>
+        <form class="needs-validation" novalidate method="post" action="{{ route('store') }}" enctype="multipart/form-data" >
+         @csrf
+            <input type="file" name="file">
+            <button type="submit"> Submit</button>
+        </form>
       
       ```
             
