@@ -25,7 +25,7 @@ class Device
         $url = self::api().'device/disconnect';
         $response = Http::withHeaders([
             'Content-Type' => 'application/json',
-            'Authorization'=> Server::token()
+            'Authorization'=> self::token()
         ])->get($url);
         $json_data = $response->json();
 
