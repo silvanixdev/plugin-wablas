@@ -430,7 +430,7 @@ $ WABLAS_SERVER=
 
       ```
             
- 8. Schedule Message
+ 6. Schedule Message
  
     - new_message($payload);
     
@@ -516,7 +516,7 @@ $ WABLAS_SERVER=
           $delete = $schedule->delete($id);
   
         ```
- 9. Send Local File (Image, Audio, Video)
+ 7. Send Local File (Image, Audio, Video)
     
     - local_file($file,$phones,$caption);
     
@@ -557,7 +557,23 @@ $ WABLAS_SERVER=
           </form>
 
       ```
+      
+  7. Report
+    
+    - real_time();
+    
+      Get Report of 1000 Send Messages Today.
+      
+    Example :
+    
+      ```PHP
+        use Silvanix\Wablas\Report;
+
+        $report = new Report();
+        $get_report = $report->real_time();
+        echo $get_report;
   
+        ```
 ## License
 
 [Aladdin Free Public License](https://en.wikipedia.org/wiki/Aladdin_Free_Public_License)
