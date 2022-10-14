@@ -26,6 +26,7 @@ untuk mempermudah dalam melakukan implementasikan fitur-fitur yang dimiliki oleh
 * Cancel Pending Message by ID
 * Cancel All Pending Message
 * Revoke Message
+* Report Send Message
 
 ## Peringatan
 
