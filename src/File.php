@@ -6,6 +6,8 @@ use Silvanix\Wablas\Server;
 
 class File
 {
+    use Server;
+
     public static function local_upload($file)
     {
         $type = self::check_ext($file);
@@ -14,12 +16,12 @@ class File
             return 'invalid file';
         }
 
-        $token = Server::token();
+        $token = self::token();
         $rawData = $file->getPathName();
         $mime = $file->getMimeType();
         $name = $file->getClientOriginalName();
 
-        $url = Server::api()."upload/$type";
+        $url = self::api()."upload/$type";
         $data = new \CURLFile($rawData,$mime,$name);
         $curl = curl_init();
         curl_setopt($curl, CURLOPT_HTTPHEADER,
