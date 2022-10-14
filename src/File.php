@@ -8,7 +8,7 @@ class File
 {
     use Server;
 
-    public static function local_upload($file)
+    public function local_upload($file)
     {
         $type = self::check_ext($file);
         if($type === null)
