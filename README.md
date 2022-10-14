@@ -567,14 +567,14 @@ $ WABLAS_SERVER=
       
         Example :
     
-      ```PHP
-        use Silvanix\Wablas\Report;
+          ```PHP
+          use Silvanix\Wablas\Report;
 
-        $report = new Report();
-        $get_report = $report->real_time();
-        echo $get_report;
+          $report = new Report();
+          $get_report = $report->real_time();
+          echo $get_report;
   
-        ```
+          ```
 ## License
 
 [Aladdin Free Public License](https://en.wikipedia.org/wiki/Aladdin_Free_Public_License)
