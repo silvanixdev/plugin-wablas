@@ -560,11 +560,11 @@ $ WABLAS_SERVER=
       
   7. Report
     
-    - real_time();
-    
-      Get Report of 1000 Send Messages Today.
+      - real_time();
+
+        Get Report of 1000 Send Messages Today.
       
-    Example :
+        Example :
     
       ```PHP
         use Silvanix\Wablas\Report;
