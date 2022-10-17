@@ -44,4 +44,40 @@ class Device
         return $json_data;
     }
 
+    public function set_webhook()
+    {
+        $url = self::api().'device/change-webhook-url';
+        $response = Http::withHeaders([
+            'Content-Type' => 'application/json',
+            'Authorization'=> self::token()
+        ])->get($url);
+        $json_data = $response->json();
+
+        return $json_data;
+    }
+
+    public function set_tracking()
+    {
+        $url = self::api().'device/change-tracking-url';
+        $response = Http::withHeaders([
+            'Content-Type' => 'application/json',
+            'Authorization'=> self::token()
+        ])->get($url);
+        $json_data = $response->json();
+
+        return $json_data;
+    }
+
+    public function incoming()
+    {
+        $url = self::api().'device/incoming';
+        $response = Http::withHeaders([
+            'Content-Type' => 'application/json',
+            'Authorization'=> self::token()
+        ])->get($url);
+        $json_data = $response->json();
+
+        return $json_data;
+    }
+
 }
