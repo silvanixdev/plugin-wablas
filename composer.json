@@ -1,9 +1,9 @@
 {
     "name": "silvanix/wablas",
     "description": "Official Wablas Plugin",
-    "type": "project",
+    "type": "library",
     "license": "MIT",
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
             "Silvanix\\Wablas\\": "src/"
