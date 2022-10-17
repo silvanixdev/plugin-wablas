@@ -68,13 +68,16 @@ class Device
         return $json_data;
     }
 
-    public function incoming()
+    public function incoming($set)
     {
         $url = self::api().'device/incoming';
+        $data = [
+            'incoming' => $set
+        ];
         $response = Http::withHeaders([
             'Content-Type' => 'application/json',
             'Authorization'=> self::token()
-        ])->get($url);
+        ])->post($url,$data);
         $json_data = $response->json();
 
         return $json_data;
