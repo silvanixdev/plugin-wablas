@@ -39,7 +39,7 @@ Karena kami tidak rela karya kami dibajak tanpa ijin.
 
 ## Tahapan Instalasi
 ```bash
-    composer require silvanix/wablas
+composer require silvanix/wablas
 ```
 
 Enviroment
