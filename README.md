@@ -56,6 +56,12 @@ WABLAS_SERVER=
   2. restart();
 
   3. disconnect();
+  
+  4. set_webhook($url);
+  
+  5. set_tracking($url);
+  
+  6. incoming($status);
 
   Example :
   ```PHP
@@ -66,6 +72,12 @@ WABLAS_SERVER=
         $info = $device->info();
         $restart = $device->restart();
         $disconnect = $device->disconnect();
+        
+        $url = 'https://www.mywebhook.com/webhook';
+        $set = $device->set_webhook($url);
+        
+        $incoming = $device->incoming('active');
+        //for now anything than 'active' = incoming message disable
   ```
   
 ## Check
