@@ -42,10 +42,10 @@ Karena kami tidak rela karya kami dibajak tanpa ijin.
 ```bash
 # Tambahkan di file .env 
 # Token bisa didapatkan di wablass.com pada menu device - setting
-$ WABLAS_TOKEN=
+WABLAS_TOKEN=
 
 # tentukan dimana akun anda terdaftar diwablas.com. saat ini server yang ada di wablas adalah: solo, pati, kudus, jogja, texas dan eu.
-$ WABLAS_SERVER=
+WABLAS_SERVER=
 
 ```
 
