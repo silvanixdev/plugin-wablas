@@ -8,8 +8,5 @@
         "psr-4": {
             "Silvanix\\Wablas\\": "src/"
         }
-    },
-    "require": {
-        "guzzlehttp/guzzle": "^7.0.1"
     }
 }

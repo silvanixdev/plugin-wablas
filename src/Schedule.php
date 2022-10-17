@@ -9,7 +9,7 @@ class Schedule
 {
     use Server;
 
-    public static function new_message($data)
+    public function new_message($data)
     {
         $payload = [ 'data'=> $data];
         $url = self::api().'v2/schedule';
@@ -23,7 +23,7 @@ class Schedule
         return $json_data;
     }
 
-    public static function cancel($id)
+    public function cancel($id)
     {
         $url = self::api()."schedule-cancel/$id";
         $response = Http::withHeaders([
@@ -35,7 +35,7 @@ class Schedule
         return $json_data;
     }
 
-    public static function delete($id)
+    public function delete($id)
     {
         $url = self::api()."schedule/$id";
         $response = Http::withHeaders([
