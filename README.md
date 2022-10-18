@@ -208,11 +208,11 @@ WABLAS_SERVER=
        ];
       $send_text = $send->multiple_text($payload);
   
-  ```
+ ```
       
    - multiple_image($payload);
     
-  ```PHP
+ ```PHP
        $payload = [
             [
                 'phone' => '6281229889541',
@@ -226,11 +226,11 @@ WABLAS_SERVER=
                 'isGroup' => true,
             ],
         ];
-   ```
+ ```
   
    - multiple_audio($payload);
    
-     ```PHP
+ ```PHP
           $payload = [
               [
                   'phone' => '6281229889541',
@@ -243,7 +243,7 @@ WABLAS_SERVER=
                   'isGroup' => true,
               ],
           ];
-     ```
+ ```
             
                 
    - multiple_video($payload);
@@ -266,7 +266,7 @@ WABLAS_SERVER=
                
    - multiple_document($payload);
    
-      ```PHP
+   ```PHP
         $payload = [
             [
                 'phone' => '6281229889541',
@@ -279,12 +279,12 @@ WABLAS_SERVER=
             ],
       ];
       
-      ```
+   ```
                 
     
    - template_message($payload);
    
-        ```PHP
+   ```PHP
          $payload = [
             [
                'phone' => '6285867765107',
@@ -310,12 +310,12 @@ WABLAS_SERVER=
             ]
         ];  
       
-      ```
+   ```
               
     
    - list_message($payload);
    
-       ```PHP
+   ```PHP
          $payload = [
             [
                 'phone' => '6285867765107',
@@ -338,11 +338,11 @@ WABLAS_SERVER=
             ]
         ];
       
-      ```
+    ```
              
    - location_message($payload);
     
-     ```PHP
+   ```PHP
         $payload = [
             [
                 'phone' => '6285867765107',
@@ -355,7 +355,7 @@ WABLAS_SERVER=
             ]
         ];
       
-      ```
+  ```
             
    - button_message($payload);
     
