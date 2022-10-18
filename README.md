@@ -248,7 +248,7 @@ WABLAS_SERVER=
                 
    - multiple_video($payload);
    
-      ```PHP
+ ```PHP
         $payload = [
             [
                 'phone' => '6281229889541',
@@ -262,11 +262,11 @@ WABLAS_SERVER=
                 'isGroup' => true,
             ],
         ];
-      ```
+ ```
                
    - multiple_document($payload);
    
-   ```PHP
+```PHP
         $payload = [
             [
                 'phone' => '6281229889541',
@@ -279,7 +279,7 @@ WABLAS_SERVER=
             ],
       ];
       
-   ```
+```
                 
     
    - template_message($payload);
@@ -392,20 +392,20 @@ WABLAS_SERVER=
         }
       ```
       - Route 
-      ```PHP
+    ```PHP
       ...
         Route::post('.../store', [App\Http\Controllers\SomeController::class, 'store'])->name('store');
-      
       ```
-    - View
-      ```Html
+ - View
+    
+  ```Html
         <form class="needs-validation" novalidate method="post" action="{{ route('store') }}" enctype="multipart/form-data" >
          @csrf
             <input type="file" name="file">
             <button type="submit"> Submit</button>
         </form>
       
-      ```
+ ```
             
  5. Send Local Document
     
