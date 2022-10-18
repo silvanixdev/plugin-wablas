@@ -156,33 +156,33 @@ WABLAS_SERVER=
 ![alt text](https://jogja.wablas.com/assets/images/gallery/api/otp.jpg)
 
   ```PHP
-          use Silvanix/Wablas/Message;
+      use Silvanix/Wablas/Message;
 
-          $send = new Message();
-          
-          $code_otp = '12213';
-          $phone = '081212121221';
-          
-          $data = [
-            [
-               'phone' => $phone,
-                'message'=> [
-                    'title' => [
-                        'type' => 'text',
-                        'content' => 'Verification Code',
+      $send = new Message();
+
+      $code_otp = '12213';
+      $phone = '081212121221';
+
+      $data = [
+        [
+           'phone' => $phone,
+            'message'=> [
+                'title' => [
+                    'type' => 'text',
+                    'content' => 'Verification Code',
+                ],
+                'buttons' => [
+                    'url' => [
+                        'display' => 'Copy',
+                        'link' => "https://www.whatsapp.com/otp/copy/$code",
                     ],
-                    'buttons' => [
-                        'url' => [
-                            'display' => 'Copy',
-                            'link' => "https://www.whatsapp.com/otp/copy/$code",
-                        ],
-                    ],
-                    'content' => "Your verification code : $code",
-                    'footer' => "Supported by Wablas",
-                ]
+                ],
+                'content' => "Your verification code : $code",
+                'footer' => "Supported by Wablas",
             ]
-        ];
-        $send_otp = $send->custom_otp($payload);
+        ]
+    ];
+    $send_otp = $send->custom_otp($payload);
 
   ```
   
