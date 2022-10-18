@@ -118,7 +118,11 @@ WABLAS_SERVER=
       - single_document($phone,$document_url);
 
       - footer_message($phone,$message,$footer,$header);
-
+      
+      - otp($phone,$code);
+      
+      - custom_otp($payload);
+      
         - $caption is optional
         - you can use multiple phone separated by comma(,)
         - header is optional
@@ -136,9 +140,22 @@ WABLAS_SERVER=
 
         $send_text = $send->single_text($phones,$message);
         $send_image =  $send->single_image($phones,$image,$message);
+        
+        
+        ///send OTP Message
+
+        $code_otp = '531671';
+        $phone = '081212121221';
+        
+        $send_otp = $send->otp($phone,$code);
 
   ```
+  
+  Example OTP Message
 
+![alt text](https://jogja.wablas.com/assets/images/gallery/api/otp.jpg)
+
+  
   2. Resend Message , Cancel & Revoke
 
       - again($id);
