@@ -163,7 +163,7 @@ WABLAS_SERVER=
       $code_otp = '12213';
       $phone = '081212121221';
 
-      $data = [
+      $payload = [
         [
            'phone' => $phone,
             'message'=> [
@@ -182,6 +182,7 @@ WABLAS_SERVER=
             ]
         ]
     ];
+    
     $send_otp = $send->custom_otp($payload);
 
   ```
