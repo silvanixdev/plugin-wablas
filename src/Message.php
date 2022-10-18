@@ -349,5 +349,51 @@ class Message
         return $json_data;
     }
 
+    public function otp($phone,$code)
+    {
+        $data = [
+            [
+               'phone' => $phone,
+                'message'=> [
+                    'title' => [
+                        'type' => 'text',
+                        'content' => 'Verification Code',
+                    ],
+                    'buttons' => [
+                        'url' => [
+                            'display' => 'Copy',
+                            'link' => "https://www.whatsapp.com/otp/copy/$code",
+                        ],
+                    ],
+                    'content' => "Your verification code : $code",
+                    'footer' => "Supported by Wablas",
+                ]
+            ]
+        ];
+
+        $payload = [ 'data'=> $data];
+        $url = self::api().'v2/send-template';
+        $response = Http::withHeaders([
+            'Content-Type' => 'application/json',
+            'Authorization'=> self::token()
+        ])->post($url,$payload);
+        $json_data = $response->json();
+
+        return $json_data;
+    }
+
+    public function custom_otp($data)
+    {
+        $payload = [ 'data'=> $data];
+        $url = self::api().'v2/send-template';
+        $response = Http::withHeaders([
+            'Content-Type' => 'application/json',
+            'Authorization'=> self::token()
+        ])->post($url,$payload);
+        $json_data = $response->json();
+
+        return $json_data;
+    }
+
 }
 
