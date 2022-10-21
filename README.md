@@ -155,9 +155,6 @@ WABLAS_SERVER=
 
 ![alt text](https://jogja.wablas.com/assets/images/gallery/api/otp.jpg)
 
-
-  ```
-  
   2. Resend Message , Cancel & Revoke
 
       - again($id);
@@ -196,7 +193,8 @@ WABLAS_SERVER=
 
   . Send Multiple Message
 
-      - multiple_text($payload);
+   - multiple_text($payload);
+      
   ```PHP
         use Silvanix/Wablas/Message;
 
