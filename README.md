@@ -144,7 +144,7 @@ WABLAS_SERVER=
         
         ///send OTP Message
 
-        $code_otp = '12213';
+        $code = '12213';
         $phone = '081212121221';
         
         $send_otp = $send->otp($phone,$code);
