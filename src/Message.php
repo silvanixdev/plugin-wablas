@@ -382,9 +382,27 @@ class Message
         return $json_data;
     }
 
-    public function custom_otp($data)
+    public function custom_otp($phone,$code,$header,$content,$footer=null)
     {
-        $payload = [ 'data'=> $data];
+        $payload = [
+            [
+               'phone' => $phone,
+                'message'=> [
+                    'title' => [
+                        'type' => 'text',
+                        'content' =>$header,
+                    ],
+                    'buttons' => [
+                        'url' => [
+                            'display' => 'Copy',
+                            'link' => "https://www.whatsapp.com/otp/copy/$code",
+                        ],
+                    ],
+                    'content' => $content,
+                    'footer' => $footer,
+                ]
+            ]
+        ];
         $url = self::api().'v2/send-template';
         $response = Http::withHeaders([
             'Content-Type' => 'application/json',
