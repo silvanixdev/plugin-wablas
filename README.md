@@ -148,6 +148,12 @@ WABLAS_SERVER=
         $phone = '081212121221';
         
         $send_otp = $send->otp($phone,$code);
+        
+        $header = 'Verification Code';
+        $content = "Your verifiction code : $code";
+        $footer = "supported by Wablas"; // footer is optional
+        
+        $send_costum_otp = costum_otp($phone,$code,$header,$content,$footer);
 
   ```
   
