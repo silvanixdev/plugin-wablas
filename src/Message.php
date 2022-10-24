@@ -384,7 +384,7 @@ class Message
 
     public function custom_otp($phone,$code,$header,$content,$footer=null)
     {
-        $payload = [
+        $data = [
             [
                'phone' => $phone,
                 'message'=> [
@@ -403,6 +403,8 @@ class Message
                 ]
             ]
         ];
+
+        $payload = [ 'data'=> $data];
         $url = self::api().'v2/send-template';
         $response = Http::withHeaders([
             'Content-Type' => 'application/json',
