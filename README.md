@@ -153,7 +153,7 @@ WABLAS_SERVER=
         $content = "Your verifiction code : $code";
         $footer = "supported by Wablas"; // footer is optional
         
-        $send_costum_otp = $send->custom_otp($phone,$code,$header,$content,$footer);
+        $send_custom_otp = $send->custom_otp($phone,$code,$header,$content,$footer);
 
   ```
   
