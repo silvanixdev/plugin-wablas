@@ -601,19 +601,26 @@ WABLAS_SERVER=
       
   7. Report
     
-      - real_time();
+      - real_time($data);
 
-        Get Report of 1000 Send Messages Today.
-      
+        Get Report API Send Messages Today, $data is nullable.
+        
         Example :
     
           ```PHP
           use Silvanix\Wablas\Report;
-
+          
           $report = new Report();
           $get_report = $report->real_time();
           echo $get_report;
-  
+          
+          $data = [
+            'message_id' => '71236812736812,8127368721', //Multiple Id separated by ID
+            'page' => '2' // number page, data show per page is 100
+          ];
+          
+          $get_report = $report->real_time($data);
+          echo $get_report;
           ```
 ## License
 
