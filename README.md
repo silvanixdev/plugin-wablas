@@ -616,7 +616,7 @@ WABLAS_SERVER=
           
           $data = [
             'message_id' => '71236812736812,8127368721', //Multiple Id separated by ID
-            'page' => '2' // number page, data show per page is 100
+            'page' => '2' // number page, data show per page is 10
           ];
           
           $get_report = $report->real_time($data);
