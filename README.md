@@ -636,25 +636,27 @@ WABLAS_SERVER=
           use Silvanix\Wablas\Contact;
           
            $data =
-          [
-              [
-                  'name' => 'Danu',
-                  'phone' => '6285867765222'
-              ],
-              [
-                  'name' => 'Karina Setya',
-                  'phone' => '6285867765777',
-                  'email' => 'karina.setya@gmail.com',
-                  'birth_day' => '1992-03-12',
-                  'address' => 'Kedokan RT 02/ RW 04 Klego Boyolali',
-              ],
-              [
-                  'name' => 'Danu',
-                  'phone' => '6285867765222'
-              ]
-          ];
+            [
+                [
+                    'name' => 'Danu',
+                    'phone' => '6285867765222'
+                ],
+                [
+                    'name' => 'Karina Setya',
+                    'phone' => '6285867765777',
+                    'email' => 'karina.setya@gmail.com',
+                    'birth_day' => '1992-03-12',
+                    'address' => 'Kedokan RT 02/ RW 04 Klego Boyolali',
+                ],
+                [
+                    'name' => 'Danu',
+                    'phone' => '6285867765222'
+                ]
+            ];
+            
           $contact = new Contact();
           $get_report = $report->create($data);
+          
           echo $get_report;
        
           ```
