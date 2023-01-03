@@ -27,6 +27,7 @@ untuk mempermudah dalam melakukan implementasikan fitur-fitur yang dimiliki oleh
 * Cancel All Pending Message
 * Revoke Message
 * Report Send Message
+* Add Contact
 
 ## Peringatan
 
@@ -616,11 +617,48 @@ WABLAS_SERVER=
           
           $data = [
             'message_id' => '71236812736812,8127368721', //Multiple Id separated by ID
-            'page' => '2' // number page, data show per page is 100
+            'page' => '2' // number page, data show per page is 10
           ];
           
           $get_report = $report->real_time($data);
           echo $get_report;
+          ```
+          
+   8. Contact
+    
+      - create($data);
+
+        Add Contact to Wablas Contact.
+        
+        Example :
+    
+          ```PHP
+          use Silvanix\Wablas\Contact;
+          
+           $data =
+            [
+                [
+                    'name' => 'Danu',
+                    'phone' => '6285867765222'
+                ],
+                [
+                    'name' => 'Karina Setya',
+                    'phone' => '6285867765777',
+                    'email' => 'karina.setya@gmail.com',
+                    'birth_day' => '1992-03-12',
+                    'address' => 'Kedokan RT 02/ RW 04 Klego Boyolali',
+                ],
+                [
+                    'name' => 'Danu',
+                    'phone' => '6285867765222'
+                ]
+            ];
+            
+          $contact = new Contact();
+          $response = $contact->create($data);
+          
+          echo $response;
+       
           ```
 ## License
 
