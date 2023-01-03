@@ -624,7 +624,7 @@ WABLAS_SERVER=
           echo $get_report;
           ```
           
-   8. COntact
+   8. Contact
     
       - create($data);
 
