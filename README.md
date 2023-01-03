@@ -655,9 +655,9 @@ WABLAS_SERVER=
             ];
             
           $contact = new Contact();
-          $get_report = $report->create($data);
+          $response = $contact->create($data);
           
-          echo $get_report;
+          echo $response;
        
           ```
 ## License
