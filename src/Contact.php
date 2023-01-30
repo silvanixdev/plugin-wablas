@@ -21,4 +21,22 @@ class Contact
 
         return $json_data;
     }
+
+    public function block($phone)
+    {
+        $url = self::api().'api/blacklist?token='.self::token().'&phone='.$phone;
+        $response = Http::get($url);
+        $json_data = $response->json();
+
+        return $json_data;
+    }
+
+    public function unblock($phone)
+    {
+        $url = self::api().'api/blacklist/cancel??token='.self::token().'&phone='.$phone;
+        $response = Http::get($url);
+        $json_data = $response->json();
+
+        return $json_data;
+    }
 }
