@@ -666,7 +666,7 @@ WABLAS_SERVER=
       
           Block Contact From Receiving Broadcast from Device/ Wablas will not save inbox from tht number.
           
-            Example :
+          Example :
     
           ```PHP
           use Silvanix\Wablas\Contact;
@@ -684,7 +684,7 @@ WABLAS_SERVER=
           
           Unblock Contact.
           
-            Example :
+          Example :
     
           ```PHP
           use Silvanix\Wablas\Contact;
