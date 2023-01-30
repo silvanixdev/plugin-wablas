@@ -664,7 +664,7 @@ WABLAS_SERVER=
           ```
       - block($phone)
       
-          Block Contact From Receiving Broadcast from Device/ Wablas will not save inbox from tht number.
+          Block Contact From Receiving Broadcast from Device & Wablas will not save inbox from this number.
           
           Example :
     
