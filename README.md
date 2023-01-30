@@ -682,6 +682,20 @@ WABLAS_SERVER=
       
       - unblock($phone)
           
+          Unblock Contact.
+          
+            Example :
+    
+          ```PHP
+          use Silvanix\Wablas\Contact;
+          
+          $phone ='081393971212';
+          $contact = new Contact();
+          $response = $contact->unblock($phone);
+          
+          echo $response;
+       
+          ```
          
 ## License
 
