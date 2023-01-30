@@ -28,6 +28,8 @@ untuk mempermudah dalam melakukan implementasikan fitur-fitur yang dimiliki oleh
 * Revoke Message
 * Report Send Message
 * Add Contact
+* Block Contact
+* Unblock Contact
 
 ## Peringatan
 
@@ -660,6 +662,27 @@ WABLAS_SERVER=
           echo $response;
        
           ```
+      - block($phone)
+      
+          Block Contact From Receiving Broadcast from Device/ Wablas will not save inbox from tht number.
+          
+            Example :
+    
+          ```PHP
+          use Silvanix\Wablas\Contact;
+          
+          $phone ='081393971212';
+          $contact = new Contact();
+          $response = $contact->block($phone);
+          
+          echo $response;
+       
+          ```
+          
+      
+      - unblock($phone)
+          
+         
 ## License
 
 [Aladdin Free Public License](https://en.wikipedia.org/wiki/Aladdin_Free_Public_License)
