@@ -537,7 +537,7 @@ WABLAS_SERVER=
             $caption = $request->caption;
             $file = $request->file('file');
             $send = new Message();
-            $test = $send->local_file($file,$phones,$phone);
+            $test = $send->local_file($file,$phones,$caption);
             echo $test;
         }
   
