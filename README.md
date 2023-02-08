@@ -433,48 +433,8 @@ WABLAS_SERVER=
       
  ```
             
- 5. Send Local Document
-    
-    - local_document($file,$phones);
-    
-    Example :
-    
-    - Controller
-    
-     ```PHP
-      use Silvanix\Wablas\Message;
-      
-      public function store(Request $request)
-      {
-          $phones = $request->phones;
-          $file = $request->file('file');
-          $send = new Message();
-          $test = $send->local_document($file,$phones);
-          echo $test;
-      }
-      ```
-      
-    - Route
-    
-      ```PHP
-      ...
-      Route::post('.../store', [App\Http\Controllers\SomeController::class, 'store'])->name('store');
-      
-      ```    
-      
-    - View
-    
-     ```Html
-      <form class="needs-validation" novalidate method="post" action="{{ route('store') }}" enctype="multipart/form-data" >
-      @csrf
-          <input type="text" placeholder="081393961320,0821212122,08128282812"name='phones'>
-          <input type="file" name="file">
-          <button type="submit"> Submit</button>
-      </form>
-
-      ```
             
- 6. Schedule Message
+ 5. Schedule Message
  
     - new_message($payload);
     
@@ -560,10 +520,12 @@ WABLAS_SERVER=
           $delete = $schedule->delete($id);
   
         ```
- 7. Send Local File (Image, Audio, Video)
+ 6. Send Local File (Image, Audio, Video, Document)
     
     - local_file($file,$phones,$caption);
     
+      There is No Caption For Audio & Document message
+      
     Example :
     
     - Controller
